@@ -1,0 +1,14 @@
+{
+	"smelter.stop": {
+		"category": "block",
+		"sounds": [
+			"smelter_stop"
+		]
+	},
+	"doorbell": {
+		"category": "block",
+		"sounds": [
+			"doorbell"
+		]
+	}
+}

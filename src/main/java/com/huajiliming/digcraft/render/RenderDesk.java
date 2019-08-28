@@ -1,0 +1,134 @@
+package com.huajiliming.digcraft.render;
+
+import org.lwjgl.opengl.GL11;
+
+import com.huajiliming.digcraft.model.ModelDesk;
+import com.huajiliming.digcraft.model.ModelDrawer;
+import com.huajiliming.digcraft.tileentity.TileEntityDesk;
+
+import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ResourceLocation;
+
+public class RenderDesk extends TileEntitySpecialRenderer {
+	private ModelDesk model = new ModelDesk();
+	private ModelDrawer modelDrawer = new ModelDrawer();
+	private RenderItem itemRenderer;
+
+	public RenderDesk() {
+		this.itemRenderer = new RenderItem() {
+			@Override
+			public byte getMiniBlockCount(ItemStack stack, byte original) {
+				return 1;
+			}
+
+			@Override
+			public byte getMiniItemCount(ItemStack stack, byte original) {
+				return 1;
+			}
+
+			@Override
+			public boolean shouldBob() {
+				return false;
+			}
+
+			@Override
+			public boolean shouldSpreadItems() {
+				return false;
+			}
+		};
+		this.itemRenderer.setRenderManager(RenderManager.instance);
+	}
+
+	@Override
+	public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float tick) {
+		GL11.glPushMatrix();
+		GL11.glTranslated(x + 0.5D, y, z + 0.5D);
+		GL11.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
+		TileEntityDesk te = (TileEntityDesk) tileentity;
+		int meta = te.getBlockMetadata();
+		if (meta < 8) {
+			this.bindTexture(new ResourceLocation("digcraft:textures/models/desk.png"));
+			switch (meta % 4) {
+			case 0:
+				GL11.glRotatef(180.0F, 0.0F, 1.0F, 0.0F);
+				break;
+			case 1:
+				break;
+			case 2:
+				GL11.glRotatef(90.0F, 0.0F, 1.0F, 0.0F);
+				break;
+			case 3:
+				GL11.glRotatef(90.0F, 0.0F, -1.0F, 0.0F);
+			}
+			this.model.render((Entity) null, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+			this.bindTexture(new ResourceLocation("digcraft:textures/models/drawer.png"));
+			GL11.glPushMatrix();
+			GL11.glTranslatef(-0.9375F, -0.4375F, te.drawerOpenLeft ? -0.3F : 0.0F);
+			this.modelDrawer.render((Entity) null, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+			GL11.glPopMatrix();
+			GL11.glPushMatrix();
+			GL11.glTranslatef(0.9375F, -0.4375F, te.drawerOpenRight ? -0.3F : 0.0F);
+			this.modelDrawer.render((Entity) null, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+			GL11.glPopMatrix();
+			RenderItem.renderInFrame = true;
+			ItemStack stack = te.getStackInSlot(0);
+			if (te.drawerOpenLeft && stack != null) {
+				GL11.glPushMatrix();
+				GL11.glTranslatef(-0.95F, -0.6F, -0.3F);
+				GL11.glRotatef(90.0F, 1.0F, 0.0F, 0.0F);
+				EntityItem entity = new EntityItem(tileentity.getWorldObj(), 0.0D, 0.0D, 0.0D, stack);
+				entity.hoverStart = 0.0F;
+				this.itemRenderer.doRender(entity, 0.0D, 0.0D, 0.0D, 0.0F, 0.0F);
+				GL11.glPopMatrix();
+			}
+			stack = te.getStackInSlot(1);
+			if (te.drawerOpenRight && stack != null) {
+				GL11.glPushMatrix();
+				GL11.glTranslatef(0.95F, -0.6F, -0.3F);
+				GL11.glRotatef(90.0F, 1.0F, 0.0F, 0.0F);
+				EntityItem entity = new EntityItem(tileentity.getWorldObj(), 0.0D, 0.0D, 0.0D, stack);
+				entity.hoverStart = 0.0F;
+				this.itemRenderer.doRender(entity, 0.0D, 0.0D, 0.0D, 0.0F, 0.0F);
+				GL11.glPopMatrix();
+			}
+			stack = te.getStackInSlot(2);
+			if (stack != null) {
+				GL11.glPushMatrix();
+				GL11.glTranslatef(1.0F, -0.9F, 0.0F);
+				GL11.glRotatef(90.0F, 1.0F, 0.0F, 0.0F);
+				EntityItem entity = new EntityItem(tileentity.getWorldObj(), 0.0D, 0.0D, 0.0D, stack);
+				entity.hoverStart = 0.0F;
+				this.itemRenderer.doRender(entity, 0.0D, 0.0D, 0.0D, 0.0F, 0.0F);
+				GL11.glPopMatrix();
+			}
+			stack = te.getStackInSlot(3);
+			if (stack != null) {
+				GL11.glPushMatrix();
+				GL11.glTranslatef(0.0F, -0.9F, 0.0F);
+				GL11.glRotatef(90.0F, 1.0F, 0.0F, 0.0F);
+				EntityItem entity = new EntityItem(tileentity.getWorldObj(), 0.0D, 0.0D, 0.0D, stack);
+				entity.hoverStart = 0.0F;
+				this.itemRenderer.doRender(entity, 0.0D, 0.0D, 0.0D, 0.0F, 0.0F);
+				GL11.glPopMatrix();
+			}
+			stack = te.getStackInSlot(4);
+			if (stack != null) {
+				GL11.glPushMatrix();
+				GL11.glTranslatef(-1.0F, -0.9F, 0.0F);
+				GL11.glRotatef(90.0F, 1.0F, 0.0F, 0.0F);
+				EntityItem entity = new EntityItem(tileentity.getWorldObj(), 0.0D, 0.0D, 0.0D, stack);
+				entity.hoverStart = 0.0F;
+				this.itemRenderer.doRender(entity, 0.0D, 0.0D, 0.0D, 0.0F, 0.0F);
+				GL11.glPopMatrix();
+			}
+			RenderItem.renderInFrame = false;
+		}
+		GL11.glPopMatrix();
+	}
+}
