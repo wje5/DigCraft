@@ -1,4 +1,4 @@
-package com.huajiliming.digcrafta.achievement;
+package com.huajiliming.digcraft.achievement;
 
 import com.huajiliming.digcraft.block.BlockLoader;
 import com.huajiliming.digcraft.item.ItemLoader;
