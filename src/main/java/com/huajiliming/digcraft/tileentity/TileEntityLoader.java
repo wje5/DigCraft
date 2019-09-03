@@ -25,6 +25,7 @@ public class TileEntityLoader {
 		this.registerTileEntity(TileEntityAmbry.class, "Ambry");
 		this.registerTileEntity(TileEntityGasBurner.class, "GasBurner");
 		this.registerTileEntity(TileEntityFridge.class, "Fridge");
+		this.registerTileEntity(TileEntityTV.class, "TV");
 	}
 
 	public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id) {

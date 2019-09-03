@@ -24,66 +24,66 @@ public class ItemTV extends Item {
 		case 1:
 			return false;
 		case 2:
-			if (this.trySetBlock(world, x - 1, y, z - 1, 8, face, player, stack)
+			if (this.trySetBlock(world, x - 1, y, z - 1, 4, face, player, stack)
 					&& this.trySetBlock(world, x, y, z - 1, 0, face, player, stack)
-					&& this.trySetBlock(world, x + 1, y, z - 1, 8, face, player, stack)
-					&& this.trySetBlock(world, x - 1, y + 1, z - 1, 8, face, player, stack)
-					&& this.trySetBlock(world, x, y + 1, z - 1, 8, face, player, stack)
-					&& this.trySetBlock(world, x + 1, y + 1, z - 1, 8, face, player, stack)) {
-				world.setBlock(x - 1, y, z - 1, BlockLoader.tv, 8, 2);
+					&& this.trySetBlock(world, x + 1, y, z - 1, 4, face, player, stack)
+					&& this.trySetBlock(world, x - 1, y + 1, z - 1, 4, face, player, stack)
+					&& this.trySetBlock(world, x, y + 1, z - 1, 4, face, player, stack)
+					&& this.trySetBlock(world, x + 1, y + 1, z - 1, 4, face, player, stack)) {
+				world.setBlock(x - 1, y, z - 1, BlockLoader.tv, 4, 2);
 				world.setBlock(x, y, z - 1, BlockLoader.tv, 0, 2);
-				world.setBlock(x + 1, y, z - 1, BlockLoader.tv, 8, 2);
+				world.setBlock(x + 1, y, z - 1, BlockLoader.tv, 4, 2);
 				world.setBlock(x - 1, y + 1, z - 1, BlockLoader.tv, 8, 2);
-				world.setBlock(x, y + 1, z - 1, BlockLoader.tv, 8, 2);
-				world.setBlock(x + 1, y + 1, z - 1, BlockLoader.tv, 8, 2);
+				world.setBlock(x, y + 1, z - 1, BlockLoader.tv, 4, 2);
+				world.setBlock(x + 1, y + 1, z - 1, BlockLoader.tv, 12, 2);
 			} else {
 				return false;
 			}
 			break;
 		case 3:
-			if (this.trySetBlock(world, x - 1, y, z + 1, 9, face, player, stack)
+			if (this.trySetBlock(world, x - 1, y, z + 1, 5, face, player, stack)
 					&& this.trySetBlock(world, x, y, z + 1, 1, face, player, stack)
-					&& this.trySetBlock(world, x + 1, y, z + 1, 9, face, player, stack)
-					&& this.trySetBlock(world, x - 1, y + 1, z + 1, 9, face, player, stack)
-					&& this.trySetBlock(world, x, y + 1, z + 1, 9, face, player, stack)
-					&& this.trySetBlock(world, x + 1, y + 1, z + 1, 9, face, player, stack)) {
-				world.setBlock(x - 1, y, z + 1, BlockLoader.tv, 9, 2);
+					&& this.trySetBlock(world, x + 1, y, z + 1, 5, face, player, stack)
+					&& this.trySetBlock(world, x - 1, y + 1, z + 1, 5, face, player, stack)
+					&& this.trySetBlock(world, x, y + 1, z + 1, 5, face, player, stack)
+					&& this.trySetBlock(world, x + 1, y + 1, z + 1, 5, face, player, stack)) {
+				world.setBlock(x - 1, y, z + 1, BlockLoader.tv, 5, 2);
 				world.setBlock(x, y, z + 1, BlockLoader.tv, 1, 2);
-				world.setBlock(x + 1, y, z + 1, BlockLoader.tv, 9, 2);
+				world.setBlock(x + 1, y, z + 1, BlockLoader.tv, 5, 2);
 				world.setBlock(x - 1, y + 1, z + 1, BlockLoader.tv, 9, 2);
-				world.setBlock(x, y + 1, z + 1, BlockLoader.tv, 9, 2);
-				world.setBlock(x + 1, y + 1, z + 1, BlockLoader.tv, 9, 2);
+				world.setBlock(x, y + 1, z + 1, BlockLoader.tv, 5, 2);
+				world.setBlock(x + 1, y + 1, z + 1, BlockLoader.tv, 13, 2);
 			} else {
 				return false;
 			}
 			break;
 		case 4:
-			if (this.trySetBlock(world, x - 1, y, z - 1, 10, face, player, stack)
+			if (this.trySetBlock(world, x - 1, y, z - 1, 6, face, player, stack)
 					&& this.trySetBlock(world, x - 1, y, z, 2, face, player, stack)
-					&& this.trySetBlock(world, x - 1, y, z + 1, 10, face, player, stack)
-					&& this.trySetBlock(world, x - 1, y + 1, z - 1, 10, face, player, stack)
-					&& this.trySetBlock(world, x - 1, y + 1, z, 10, face, player, stack)
-					&& this.trySetBlock(world, x - 1, y + 1, z + 1, 10, face, player, stack)) {
-				world.setBlock(x - 1, y, z - 1, BlockLoader.tv, 10, 2);
+					&& this.trySetBlock(world, x - 1, y, z + 1, 6, face, player, stack)
+					&& this.trySetBlock(world, x - 1, y + 1, z - 1, 6, face, player, stack)
+					&& this.trySetBlock(world, x - 1, y + 1, z, 6, face, player, stack)
+					&& this.trySetBlock(world, x - 1, y + 1, z + 1, 6, face, player, stack)) {
+				world.setBlock(x - 1, y, z - 1, BlockLoader.tv, 6, 2);
 				world.setBlock(x - 1, y, z, BlockLoader.tv, 2, 2);
-				world.setBlock(x - 1, y, z + 1, BlockLoader.tv, 10, 2);
+				world.setBlock(x - 1, y, z + 1, BlockLoader.tv, 6, 2);
 				world.setBlock(x - 1, y + 1, z - 1, BlockLoader.tv, 10, 2);
-				world.setBlock(x - 1, y + 1, z, BlockLoader.tv, 10, 2);
-				world.setBlock(x - 1, y + 1, z + 1, BlockLoader.tv, 10, 2);
+				world.setBlock(x - 1, y + 1, z, BlockLoader.tv, 6, 2);
+				world.setBlock(x - 1, y + 1, z + 1, BlockLoader.tv, 14, 2);
 			} else {
 				return false;
 			}
 			break;
 		case 5:
-			if (this.trySetBlock(world, x + 1, y, z - 1, 11, face, player, stack)
+			if (this.trySetBlock(world, x + 1, y, z - 1, 7, face, player, stack)
 					&& this.trySetBlock(world, x + 1, y, z, 3, face, player, stack)
-					&& this.trySetBlock(world, x + 1, y, z + 1, 11, face, player, stack)) {
-				world.setBlock(x + 1, y, z - 1, BlockLoader.tv, 11, 2);
+					&& this.trySetBlock(world, x + 1, y, z + 1, 7, face, player, stack)) {
+				world.setBlock(x + 1, y, z - 1, BlockLoader.tv, 7, 2);
 				world.setBlock(x + 1, y, z, BlockLoader.tv, 3, 2);
-				world.setBlock(x + 1, y, z + 1, BlockLoader.tv, 11, 2);
+				world.setBlock(x + 1, y, z + 1, BlockLoader.tv, 7, 2);
 				world.setBlock(x + 1, y + 1, z - 1, BlockLoader.tv, 11, 2);
-				world.setBlock(x + 1, y + 1, z, BlockLoader.tv, 11, 2);
-				world.setBlock(x + 1, y + 1, z + 1, BlockLoader.tv, 11, 2);
+				world.setBlock(x + 1, y + 1, z, BlockLoader.tv, 7, 2);
+				world.setBlock(x + 1, y + 1, z + 1, BlockLoader.tv, 15, 2);
 			} else {
 				return false;
 			}

@@ -1,0 +1,32 @@
+[16:46:51] [main/INFO]: Setting user: Player882
+[16:46:54] [Client thread/INFO]: LWJGL Version: 2.9.1
+[16:46:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Dig Craft
+[16:47:01] [Sound Library Loader/INFO]: Sound engine started
+[16:47:02] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[16:47:02] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[16:47:03] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Dig Craft
+[16:47:03] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[16:47:04] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[16:47:04] [Sound Library Loader/INFO]: Sound engine started
+[16:47:09] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[16:47:09] [Server thread/INFO]: Generating keypair
+[16:47:10] [Server thread/INFO]: Preparing start region for level 0
+[16:47:10] [Server thread/INFO]: Changing view distance to 12, from 10
+[16:47:11] [Server thread/INFO]: Player882[local:E:31e12385] logged in with entity id 148 at (1394.9024972725067, 4.0, 1151.0661178332202)
+[16:47:11] [Server thread/INFO]: Player882 joined the game
+[16:47:12] [Client thread/INFO]: [CHAT] Welcome to join our Mod develop group:QQ529418824
+[16:47:14] [Server thread/INFO]: Player882 has just earned the achievement [Taking Inventory]
+[16:47:14] [Client thread/INFO]: [CHAT] Player882 has just earned the achievement [Taking Inventory]
+[16:47:28] [Server thread/INFO]: Saving and pausing game...
+[16:47:28] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[16:47:28] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[16:47:28] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[16:48:41] [Client thread/INFO]: Stopping!
+[16:48:41] [Server thread/INFO]: Stopping server
+[16:48:41] [Server thread/INFO]: Saving players
+[16:48:41] [Server thread/INFO]: Saving worlds
+[16:48:41] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[16:48:41] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[16:48:41] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[16:48:41] [Client Shutdown Thread/INFO]: Stopping server
+[16:48:41] [Client Shutdown Thread/INFO]: Saving players

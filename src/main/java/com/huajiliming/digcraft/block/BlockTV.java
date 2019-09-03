@@ -12,7 +12,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockTV extends BlockContainer {
@@ -60,10 +59,13 @@ public class BlockTV extends BlockContainer {
 				break;
 			case 2:
 			case 3:
-				if (world.getBlock(x, y, z - 1) != BlockLoader.tv || world.getBlock(x, y, z + 1) != BlockLoader.tv) {
+				if (world.getBlock(x, y, z - 1) != BlockLoader.tv || world.getBlock(x, y, z + 1) != BlockLoader.tv
+						|| world.getBlock(x, y + 1, z - 1) != BlockLoader.tv
+						|| world.getBlock(x, y + 1, z) != BlockLoader.tv
+						|| world.getBlock(x, y + 1, z + 1) != BlockLoader.tv) {
 					this.dropBlockAsItem(world, x, y, z, new ItemStack(ItemLoader.tv));
-					world.setBlock(x, y, z - 1, Blocks.air, 0, 2);
 					world.setBlock(x, y, z, Blocks.air, 0, 2);
+					world.setBlock(x, y, z - 1, Blocks.air, 0, 2);
 					world.setBlock(x, y, z + 1, Blocks.air, 0, 2);
 					world.setBlock(x, y + 1, z - 1, Blocks.air, 0, 2);
 					world.setBlock(x, y + 1, z, Blocks.air, 0, 2);
@@ -74,14 +76,64 @@ public class BlockTV extends BlockContainer {
 		}
 	}
 
+//	@Override
+//	public void setBlockBoundsBasedOnState(IBlockAccess world, int x, int y, int z) {
+//		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.875F, 1.0F);
+//	}
+
 	@Override
-	public void setBlockBoundsBasedOnState(IBlockAccess world, int x, int y, int z) {
-		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.875F, 1.0F);
+	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
+		if (meta < 4) {
+			switch (meta) {
+			case 0:
+			case 1:
+				world.setBlock(x - 1, y, z, Blocks.air, 0, 2);
+				world.setBlock(x, y, z, Blocks.air, 0, 2);
+				world.setBlock(x + 1, y, z, Blocks.air, 0, 2);
+				world.setBlock(x - 1, y + 1, z, Blocks.air, 0, 2);
+				world.setBlock(x, y + 1, z, Blocks.air, 0, 2);
+				world.setBlock(x + 1, y + 1, z, Blocks.air, 0, 2);
+				break;
+			case 2:
+			case 3:
+				world.setBlock(x, y, z - 1, Blocks.air, 0, 2);
+				world.setBlock(x, y, z, Blocks.air, 0, 2);
+				world.setBlock(x, y, z + 1, Blocks.air, 0, 2);
+				world.setBlock(x, y + 1, z - 1, Blocks.air, 0, 2);
+				world.setBlock(x, y + 1, z, Blocks.air, 0, 2);
+				world.setBlock(x, y + 1, z + 1, Blocks.air, 0, 2);
+				break;
+			}
+		} else if (meta >= 8) {
+			switch (meta) {
+			case 8:
+			case 9:
+				world.setBlock(x + 1, y - 1, z, Blocks.air, 0, 2);
+//				this.dropBlockAsItem(world, x + 1, y - 1, z, new ItemStack(ItemLoader.tv));
+				break;
+			case 10:
+			case 11:
+				world.setBlock(x, y - 1, z + 1, Blocks.air, 0, 2);
+//				this.dropBlockAsItem(world, x, y - 1, z + 1, new ItemStack(ItemLoader.tv));
+				break;
+			case 12:
+			case 13:
+				world.setBlock(x - 1, y - 1, z, Blocks.air, 0, 2);
+//				this.dropBlockAsItem(world, x - 1, y - 1, z, new ItemStack(ItemLoader.tv));
+				break;
+			case 14:
+			case 15:
+				world.setBlock(x, y - 1, z - 1, Blocks.air, 0, 2);
+//				this.dropBlockAsItem(world, x, y - 1, z - 1, new ItemStack(ItemLoader.tv));
+				break;
+			}
+		}
+		super.breakBlock(world, x, y, z, block, meta);
 	}
 
 	@Override
 	public Item getItemDropped(int meta, Random rand, int fortune) {
-		return meta < 8 ? ItemLoader.tv : null;
+		return meta < 4 ? ItemLoader.tv : null;
 	}
 
 	@Override
