@@ -1,9 +1,9 @@
 package com.huajiliming.digcraft.inventory;
 
+import com.huajiliming.digcraft.achievement.AchievementLoader;
 import com.huajiliming.digcraft.block.BlockLoader;
 import com.huajiliming.digcraft.item.ItemLoader;
 import com.huajiliming.digcraft.tileentity.TileEntitySmelter;
-import com.huajiliming.digcrafta.achievement.AchievementLoader;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

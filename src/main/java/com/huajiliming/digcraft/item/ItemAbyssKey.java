@@ -1,9 +1,9 @@
 package com.huajiliming.digcraft.item;
 
+import com.huajiliming.digcraft.achievement.AchievementLoader;
 import com.huajiliming.digcraft.block.BlockLoader;
 import com.huajiliming.digcraft.creativetab.CreativeTabsLoader;
 import com.huajiliming.digcraft.entity.EntityRitual;
-import com.huajiliming.digcrafta.achievement.AchievementLoader;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;

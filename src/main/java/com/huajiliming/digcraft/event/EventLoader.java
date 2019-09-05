@@ -1,5 +1,6 @@
 package com.huajiliming.digcraft.event;
 
+import com.huajiliming.digcraft.achievement.AchievementLoader;
 import com.huajiliming.digcraft.block.BlockLoader;
 import com.huajiliming.digcraft.entity.EntityGrayJadeGolem;
 import com.huajiliming.digcraft.item.ItemLoader;
@@ -9,7 +10,6 @@ import com.huajiliming.digcraft.network.NetworkHandler;
 import com.huajiliming.digcraft.potioneffect.PotionLoader;
 import com.huajiliming.digcraft.world.gen.OreGenerateHandler;
 import com.huajiliming.digcraft.worldstorage.GolemWorldSavedData;
-import com.huajiliming.digcrafta.achievement.AchievementLoader;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

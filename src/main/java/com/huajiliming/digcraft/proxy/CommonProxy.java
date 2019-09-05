@@ -1,5 +1,6 @@
 package com.huajiliming.digcraft.proxy;
 
+import com.huajiliming.digcraft.achievement.AchievementLoader;
 import com.huajiliming.digcraft.block.BlockLoader;
 import com.huajiliming.digcraft.config.ConfigLoader;
 import com.huajiliming.digcraft.crafting.CraftingLoader;
@@ -14,7 +15,6 @@ import com.huajiliming.digcraft.potioneffect.PotionLoader;
 import com.huajiliming.digcraft.tileentity.TileEntityLoader;
 import com.huajiliming.digcraft.world.gen.EndGenHandler;
 import com.huajiliming.digcraft.world.gen.RadiationCityGenHandler;
-import com.huajiliming.digcrafta.achievement.AchievementLoader;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;

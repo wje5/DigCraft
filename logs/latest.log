@@ -1,32 +1,208 @@
-[16:46:51] [main/INFO]: Setting user: Player882
-[16:46:54] [Client thread/INFO]: LWJGL Version: 2.9.1
-[16:46:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Dig Craft
-[16:47:01] [Sound Library Loader/INFO]: Sound engine started
-[16:47:02] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[16:47:02] [Client thread/INFO]: Created: 512x512 textures/items-atlas
-[16:47:03] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Dig Craft
-[16:47:03] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[16:47:04] [Client thread/INFO]: Created: 512x512 textures/items-atlas
-[16:47:04] [Sound Library Loader/INFO]: Sound engine started
-[16:47:09] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[16:47:09] [Server thread/INFO]: Generating keypair
-[16:47:10] [Server thread/INFO]: Preparing start region for level 0
-[16:47:10] [Server thread/INFO]: Changing view distance to 12, from 10
-[16:47:11] [Server thread/INFO]: Player882[local:E:31e12385] logged in with entity id 148 at (1394.9024972725067, 4.0, 1151.0661178332202)
-[16:47:11] [Server thread/INFO]: Player882 joined the game
-[16:47:12] [Client thread/INFO]: [CHAT] Welcome to join our Mod develop group:QQ529418824
-[16:47:14] [Server thread/INFO]: Player882 has just earned the achievement [Taking Inventory]
-[16:47:14] [Client thread/INFO]: [CHAT] Player882 has just earned the achievement [Taking Inventory]
-[16:47:28] [Server thread/INFO]: Saving and pausing game...
-[16:47:28] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:47:28] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:47:28] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:48:41] [Client thread/INFO]: Stopping!
-[16:48:41] [Server thread/INFO]: Stopping server
-[16:48:41] [Server thread/INFO]: Saving players
-[16:48:41] [Server thread/INFO]: Saving worlds
-[16:48:41] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:48:41] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:48:41] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:48:41] [Client Shutdown Thread/INFO]: Stopping server
-[16:48:41] [Client Shutdown Thread/INFO]: Saving players
+[19:54:34] [main/INFO]: Extra: []
+[19:54:34] [main/INFO]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[19:54:34] [main/INFO]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[19:54:34] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/eye/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[19:54:34] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[19:54:34] [main/INFO]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[19:54:34] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[19:54:34] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[19:54:34] [main/INFO]: Forge Mod Loader version 7.99.16.1448 for Minecraft 1.7.10 loading
+[19:54:34] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_211, running on Mac OS X:x86_64:10.14.6, installed at /Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre
+[19:54:34] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[19:54:34] [main/INFO]: Found a command line coremod : codechicken.nei.asm.NEICorePlugin
+[19:54:34] [main/WARN]: The coremod codechicken.nei.asm.NEICorePlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[19:54:34] [main/INFO]: Found a command line coremod : codechicken.core.launch.CodeChickenCorePlugin
+[19:54:40] [main/WARN]: The coremod codechicken.core.launch.CodeChickenCorePlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[19:54:40] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[19:54:40] [main/INFO]: Injecting location in coremod cpw.mods.fml.relauncher.FMLCorePlugin
+[19:54:40] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[19:54:40] [main/INFO]: Injecting location in coremod codechicken.core.asm.MCPDeobfuscationTransformer.LoadPlugin
+[19:54:40] [main/INFO]: Injecting location in coremod codechicken.nei.asm.NEICorePlugin
+[19:54:40] [main/INFO]: Injecting location in coremod codechicken.core.launch.CodeChickenCorePlugin
+[19:54:40] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[19:54:40] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[19:54:40] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[19:54:40] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[19:54:40] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
+[19:54:40] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[19:54:40] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[19:54:41] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
+[19:54:41] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[19:54:41] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[19:54:42] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[19:54:42] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
+[19:54:42] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
+[19:54:43] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[19:54:43] [main/INFO]: Remapping AccessTransformer rules...
+[19:54:43] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
+[19:54:43] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
+[19:54:43] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[19:54:45] [main/INFO]: Setting user: Player185
+[19:54:48] [Client thread/INFO]: LWJGL Version: 2.9.1
+[19:54:50] [Client thread/INFO]: [cpw.mods.fml.client.SplashProgress:start:188]: ---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 19-9-5 下午7:54
+Description: Loading screen debug info
+
+This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Mac OS X (x86_64) version 10.14.6
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 4783768008 bytes (4562 MB) / 6174015488 bytes (5888 MB) up to 6174015488 bytes (5888 MB)
+	JVM Flags: 2 total; -Xmx6144M -Xms6144M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	GL info: ' Vendor: 'Intel Inc.' Version: '2.1 INTEL-12.10.12' Renderer: 'Intel Iris OpenGL Engine'
+[19:54:50] [Client thread/INFO]: Attempting early MinecraftForge initialization
+[19:54:50] [Client thread/INFO]: MinecraftForge v10.13.4.1448 Initialized
+[19:54:50] [Client thread/INFO]: Replaced 183 ore recipies
+[19:54:50] [Client thread/INFO]: Completed early MinecraftForge initialization
+[19:54:50] [Client thread/INFO]: Found 0 mods from the command line. Injecting into mod discoverer
+[19:54:50] [Client thread/INFO]: Searching /Volumes/NO NAME/workspace/DigCraft/mods for mods
+[19:54:50] [Client thread/INFO]: Also searching /Volumes/NO NAME/workspace/DigCraft/mods/1.7.10 for mods
+[19:54:55] [Client thread/INFO]: Forge Mod Loader has identified 6 mods to load
+[19:54:56] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, NotEnoughItems, CodeChickenCore, digcraft] at CLIENT
+[19:54:56] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, NotEnoughItems, CodeChickenCore, digcraft] at SERVER
+[19:54:56] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Dig Craft
+[19:54:56] [Client thread/INFO]: Processing ObjectHolder annotations
+[19:54:56] [Client thread/INFO]: Found 341 ObjectHolder annotations
+[19:54:56] [Client thread/INFO]: Identifying ItemStackHolder annotations
+[19:54:56] [Client thread/INFO]: Found 0 ItemStackHolder annotations
+[19:54:56] [Client thread/INFO]: Configured a dormant chunk cache size of 0
+[19:54:56] [Client thread/INFO]: Started loading config. 
+[19:54:56] [Client thread/INFO]: Finished loading config. 
+[19:54:57] [Client thread/INFO]: Applying holder lookups
+[19:54:57] [Client thread/INFO]: Holder lookups applied
+[19:54:57] [Client thread/INFO]: Injecting itemstacks
+[19:54:57] [Client thread/INFO]: Itemstack injection complete
+[19:54:57] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:54:57] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
+[19:54:58] [Thread-7/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
+[19:54:58] [Thread-7/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[19:54:58] [Thread-7/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
+[19:54:58] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:54:58] [Sound Library Loader/INFO]: Sound engine started
+[19:54:59] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[19:54:59] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[19:54:59] [Client thread/ERROR]: Unable to do mod description scrolling due to lack of stencil buffer
+[19:55:00] [Client thread/ERROR]: Unable to do mod description scrolling due to lack of stencil buffer
+[19:55:00] [Client thread/INFO]: Injecting itemstacks
+[19:55:00] [Client thread/INFO]: Itemstack injection complete
+[19:55:00] [Client thread/INFO]: Forge Mod Loader has successfully loaded 6 mods
+[19:55:00] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Dig Craft
+[19:55:00] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[19:55:01] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[19:55:01] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:55:01] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[19:55:01] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[19:55:01] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:55:01] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:55:01] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
+[19:55:01] [Thread-10/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
+[19:55:01] [Thread-10/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[19:55:01] [Thread-10/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
+[19:55:01] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:55:01] [Sound Library Loader/INFO]: Sound engine started
+[19:55:02] [Client thread/ERROR]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+[19:55:02] [Client thread/ERROR]: The following texture errors were found.
+[19:55:02] [Client thread/ERROR]: ==================================================
+[19:55:02] [Client thread/ERROR]:   DOMAIN digcraft
+[19:55:02] [Client thread/ERROR]: --------------------------------------------------
+[19:55:02] [Client thread/ERROR]:   domain digcraft is missing 10 textures
+[19:55:02] [Client thread/ERROR]:     domain digcraft has 1 location:
+[19:55:02] [Client thread/ERROR]:       mod digcraft resources at /Volumes/NO NAME/workspace/DigCraft/bin
+[19:55:02] [Client thread/ERROR]: -------------------------
+[19:55:02] [Client thread/ERROR]:     The missing resources for domain digcraft are:
+[19:55:02] [Client thread/ERROR]:       textures/items/diningTable.png
+[19:55:02] [Client thread/ERROR]:       textures/items/longTable.png
+[19:55:02] [Client thread/ERROR]:       textures/blocks/fridge.png
+[19:55:02] [Client thread/ERROR]:       textures/items/longSofa.png
+[19:55:02] [Client thread/ERROR]:       textures/items/tv.png
+[19:55:02] [Client thread/ERROR]:       textures/items/desk.png
+[19:55:02] [Client thread/ERROR]:       textures/blocks/tv.png
+[19:55:02] [Client thread/ERROR]:       textures/items/fridge.png
+[19:55:02] [Client thread/ERROR]:       textures/items/diningChair.png
+[19:55:02] [Client thread/ERROR]:       textures/items/pan.png
+[19:55:02] [Client thread/ERROR]: -------------------------
+[19:55:02] [Client thread/ERROR]:     No other errors exist for domain digcraft
+[19:55:02] [Client thread/ERROR]: ==================================================
+[19:55:02] [Client thread/ERROR]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+[19:55:11] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[19:55:11] [Server thread/INFO]: Generating keypair
+[19:55:12] [Server thread/INFO]: Injecting existing block and item data into this server instance
+[19:55:12] [Server thread/INFO]: Applying holder lookups
+[19:55:12] [Server thread/INFO]: Holder lookups applied
+[19:55:12] [Server thread/INFO]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@75fc8cc1)
+[19:55:12] [Server thread/INFO]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@75fc8cc1)
+[19:55:12] [Server thread/INFO]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@75fc8cc1)
+[19:55:12] [Server thread/INFO]: Preparing start region for level 0
+[19:55:13] [Server thread/INFO]: Changing view distance to 12, from 10
+[19:55:14] [Netty Client IO #0/INFO]: Server protocol version 2
+[19:55:14] [Netty IO #1/INFO]: Client protocol version 2
+[19:55:14] [Netty IO #1/INFO]: Client attempting to join with 6 mods : digcraft@@version@,NotEnoughItems@1.0.5.120,CodeChickenCore@1.0.7.47,FML@7.10.99.99,Forge@10.13.4.1448,mcp@9.05
+[19:55:14] [Netty IO #1/INFO]: Attempting connection with missing mods [] at CLIENT
+[19:55:14] [Netty Client IO #0/INFO]: Attempting connection with missing mods [] at SERVER
+[19:55:14] [Server thread/INFO]: [Server thread] Server side modded connection established
+[19:55:14] [Server thread/INFO]: Player185[local:E:b14e8f4c] logged in with entity id 148 at (1394.9024972725067, 4.0, 1151.0661178332202)
+[19:55:14] [Client thread/INFO]: [Client thread] Client side modded connection established
+[19:55:14] [Server thread/INFO]: Player185 joined the game
+[19:55:15] [Client thread/ERROR]: Error handling SMP Check
+java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Integer
+	at codechicken.nei.api.ItemInfo.addEntityEgg(ItemInfo.java:466) ~[ItemInfo.class:?]
+	at codechicken.nei.api.ItemInfo.addSpawnEggs(ItemInfo.java:461) ~[ItemInfo.class:?]
+	at codechicken.nei.api.ItemInfo.load(ItemInfo.java:105) ~[ItemInfo.class:?]
+	at codechicken.nei.NEIClientConfig.bootNEI(NEIClientConfig.java:258) ~[NEIClientConfig.class:?]
+	at codechicken.nei.NEIClientConfig.loadWorld(NEIClientConfig.java:208) ~[NEIClientConfig.class:?]
+	at codechicken.nei.NEICPH.handleSMPCheck(NEICPH.java:109) [NEICPH.class:?]
+	at codechicken.nei.NEICPH.handlePacket(NEICPH.java:23) [NEICPH.class:?]
+	at codechicken.lib.packet.PacketCustom$ClientInboundHandler.handle(PacketCustom.java:100) [PacketCustom$ClientInboundHandler.class:?]
+	at codechicken.lib.packet.PacketCustom$CustomInboundHandler.channelRead0(PacketCustom.java:77) [PacketCustom$CustomInboundHandler.class:?]
+	at codechicken.lib.packet.PacketCustom$CustomInboundHandler.channelRead0(PacketCustom.java:64) [PacketCustom$CustomInboundHandler.class:?]
+	at io.netty.channel.SimpleChannelInboundHandler.channelRead(SimpleChannelInboundHandler.java:98) [SimpleChannelInboundHandler.class:?]
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRead(DefaultChannelHandlerContext.java:337) [DefaultChannelHandlerContext.class:?]
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRead(DefaultChannelHandlerContext.java:323) [DefaultChannelHandlerContext.class:?]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:785) [DefaultChannelPipeline.class:?]
+	at io.netty.channel.embedded.EmbeddedChannel.writeInbound(EmbeddedChannel.java:169) [EmbeddedChannel.class:?]
+	at cpw.mods.fml.common.network.internal.FMLProxyPacket.processPacket(FMLProxyPacket.java:86) [FMLProxyPacket.class:?]
+	at net.minecraft.network.NetworkManager.processReceivedPackets(NetworkManager.java:241) [NetworkManager.class:?]
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2152) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039) [Minecraft.class:?]
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962) [Minecraft.class:?]
+	at net.minecraft.client.main.Main.main(Main.java:164) [Main.class:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_211]
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135) [launchwrapper-1.11.jar:?]
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.11.jar:?]
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source) [start/:?]
+	at GradleStart.main(Unknown Source) [start/:?]
+[19:55:15] [Client thread/INFO]: [CHAT] Welcome to join our Mod develop group:QQ529418824
+[19:55:17] [Server thread/INFO]: Player185 has just earned the achievement [Taking Inventory]
+[19:55:17] [Client thread/INFO]: [CHAT] Player185 has just earned the achievement [Taking Inventory]
+[19:55:23] [Server thread/INFO]: Saving and pausing game...
+[19:55:23] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:55:23] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:55:23] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:55:36] [Server thread/INFO]: Saving and pausing game...
+[19:55:36] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[19:55:38] [Client thread/INFO]: Stopping!
+[19:55:38] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:55:38] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
+[19:55:38] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[19:55:38] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[19:55:38] [Server thread/INFO]: Stopping server
+[19:55:38] [Server thread/INFO]: Saving players
+[19:55:38] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
+[19:55:38] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
+[19:55:38] [Client Shutdown Thread/INFO]: Stopping server

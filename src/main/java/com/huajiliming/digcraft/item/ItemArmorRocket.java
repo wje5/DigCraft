@@ -1,11 +1,11 @@
 package com.huajiliming.digcraft.item;
 
+import com.huajiliming.digcraft.achievement.AchievementLoader;
 import com.huajiliming.digcraft.creativetab.CreativeTabsLoader;
 import com.huajiliming.digcraft.model.ModelRocketBoot;
 import com.huajiliming.digcraft.model.ModelRocketChestplate;
 import com.huajiliming.digcraft.model.ModelRocketHelmet;
 import com.huajiliming.digcraft.model.ModelRocketLegging;
-import com.huajiliming.digcrafta.achievement.AchievementLoader;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

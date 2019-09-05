@@ -378,7 +378,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kGG7usjEEemUKsVdLWnGlw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_orKxkM4xEemfmPsz80v9SQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_kGL1gMjEEemUKsVdLWnGlw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_77spIM_IEemJxrcT-o-iyQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_kGL1gMjEEemUKsVdLWnGlw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kGG7x8jEEemUKsVdLWnGlw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -413,7 +413,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kGG8E8jEEemUKsVdLWnGlw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_orPDAM4xEemfmPsz80v9SQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_kGL088jEEemUKsVdLWnGlw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_77wTgM_IEemJxrcT-o-iyQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_kGL088jEEemUKsVdLWnGlw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kGG8HcjEEemUKsVdLWnGlw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -664,7 +664,6 @@
       <tags>platform:cocoa</tags>
     </bindings>
     <bindings xmi:id="_kGHiN8jEEemUKsVdLWnGlw" keySequence="COMMAND+G" command="_kGLOA8jEEemUKsVdLWnGlw"/>
-    <bindings xmi:id="_kGHiOMjEEemUKsVdLWnGlw" keySequence="ALT+COMMAND+W" command="_kGL0ZsjEEemUKsVdLWnGlw"/>
     <bindings xmi:id="_kGHiOcjEEemUKsVdLWnGlw" keySequence="ALT+COMMAND+W" command="_kGMas8jEEemUKsVdLWnGlw">
       <tags>platform:cocoa</tags>
     </bindings>
@@ -849,7 +848,7 @@
       <tags>platform:cocoa</tags>
       <parameters xmi:id="_kGHinsjEEemUKsVdLWnGlw" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.ui.console.ConsoleView"/>
     </bindings>
-    <bindings xmi:id="_oHZ9Mc4xEemfmPsz80v9SQ" keySequence="COMMAND+CTRL+F" command="_kGMbH8jEEemUKsVdLWnGlw"/>
+    <bindings xmi:id="_7gi-MM_IEemJxrcT-o-iyQ" keySequence="COMMAND+CTRL+F" command="_kGMbH8jEEemUKsVdLWnGlw"/>
   </bindingTables>
   <bindingTables xmi:id="_kGHioMjEEemUKsVdLWnGlw" elementId="org.eclipse.debug.ui.debugging" bindingContext="_kGIJV8jEEemUKsVdLWnGlw">
     <bindings xmi:id="_kGHiocjEEemUKsVdLWnGlw" keySequence="COMMAND+F2" command="_kGL1PcjEEemUKsVdLWnGlw"/>
@@ -1025,7 +1024,7 @@
     <bindings xmi:id="_kGHjDcjEEemUKsVdLWnGlw" keySequence="ALT+CR" command="_kGLN98jEEemUKsVdLWnGlw"/>
   </bindingTables>
   <bindingTables xmi:id="_kGHjDsjEEemUKsVdLWnGlw" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_kGIJXsjEEemUKsVdLWnGlw">
-    <bindings xmi:id="_oHakQM4xEemfmPsz80v9SQ" keySequence="M1+W" command="_kGMbIcjEEemUKsVdLWnGlw"/>
+    <bindings xmi:id="_7gkMUM_IEemJxrcT-o-iyQ" keySequence="M1+W" command="_kGMbIcjEEemUKsVdLWnGlw"/>
   </bindingTables>
   <bindingTables xmi:id="_kGHjEMjEEemUKsVdLWnGlw" bindingContext="_kGIJZMjEEemUKsVdLWnGlw"/>
   <bindingTables xmi:id="_kGHjEcjEEemUKsVdLWnGlw" bindingContext="_kGIJZcjEEemUKsVdLWnGlw"/>
@@ -1255,7 +1254,7 @@
     <tags>View</tags>
     <tags>categoryTag:General</tags>
   </descriptors>
-  <descriptors xmi:id="_kGIJmsjEEemUKsVdLWnGlw" elementId="org.eclipse.help.ui.HelpView" label="Help" iconURI="platform:/plugin/org.eclipse.help.ui/icons/view16/help_view.gif" tooltip="" category="Help" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+  <descriptors xmi:id="_kGIJmsjEEemUKsVdLWnGlw" elementId="org.eclipse.help.ui.HelpView" label="Help" iconURI="platform:/plugin/org.eclipse.help.ui/icons/view16/help_view.png" tooltip="" category="Help" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.help.ui.internal.views.HelpView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.help.ui"/>
     <tags>View</tags>
@@ -2165,7 +2164,7 @@
   <commands xmi:id="_kGL1xcjEEemUKsVdLWnGlw" elementId="org.eclipse.egit.ui.RepositoriesToggleBranchCommit" commandName="Toggle Latest Branch Commit" category="_kGNCFcjEEemUKsVdLWnGlw"/>
   <commands xmi:id="_kGL1xsjEEemUKsVdLWnGlw" elementId="org.eclipse.egit.ui.history.PushCommit" commandName="Push Commit..." category="_kGNCHMjEEemUKsVdLWnGlw"/>
   <commands xmi:id="_kGL1x8jEEemUKsVdLWnGlw" elementId="org.eclipse.jdt.ui.edit.text.java.surround.with.try.multicatch" commandName="Surround with try/multi-catch Block" description="Surround the selected text with a try/multi-catch block" category="_kGNCGcjEEemUKsVdLWnGlw"/>
-  <commands xmi:id="_kGL1yMjEEemUKsVdLWnGlw" elementId="org.eclipse.egit.ui.team.Tag" commandName="Tag" category="_kGNCFcjEEemUKsVdLWnGlw"/>
+  <commands xmi:id="_kGL1yMjEEemUKsVdLWnGlw" elementId="org.eclipse.egit.ui.team.Tag" commandName="Create Tag..." category="_kGNCFcjEEemUKsVdLWnGlw"/>
   <commands xmi:id="_kGL1ycjEEemUKsVdLWnGlw" elementId="org.eclipse.egit.ui.team.NoAssumeUnchanged" commandName="No Assume Unchanged" category="_kGNCFcjEEemUKsVdLWnGlw"/>
   <commands xmi:id="_kGL1ysjEEemUKsVdLWnGlw" elementId="org.eclipse.ui.ide.showInSystemExplorer" commandName="Show In (System Explorer)" description="Show in system's explorer (file manager)" category="_kGNCB8jEEemUKsVdLWnGlw">
     <parameters xmi:id="_kGL1y8jEEemUKsVdLWnGlw" elementId="org.eclipse.ui.ide.showInSystemExplorer.path" name="Resource System Path Parameter"/>
@@ -2508,6 +2507,10 @@
   <commands xmi:id="_kGNB6cjEEemUKsVdLWnGlw" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.tasks.ui.open.repositories.view" commandName="Show Task Repositories View" description="Show Task Repositories View" category="_kGNCHMjEEemUKsVdLWnGlw"/>
   <commands xmi:id="_kGNB6sjEEemUKsVdLWnGlw" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.doc.legend.show.action" commandName="Show UI Legend" description="Show Tasks UI Legend" category="_kGNCHMjEEemUKsVdLWnGlw"/>
   <commands xmi:id="_kGNB68jEEemUKsVdLWnGlw" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.context.ui.actions.tasklist.focus" commandName="Focus on Workweek" description="Focus on Workweek" category="_kGNCHMjEEemUKsVdLWnGlw"/>
+  <commands xmi:id="_GiXx4c-SEemlGv65B_jh-Q" elementId="org.eclipse.egit.ui.team.Revert" commandName="Revert Commit" category="_kGNCFcjEEemUKsVdLWnGlw"/>
+  <commands xmi:id="_GiXx4s-SEemlGv65B_jh-Q" elementId="org.eclipse.egit.ui.team.CherryPick" commandName="Cherry Pick" category="_kGNCFcjEEemUKsVdLWnGlw"/>
+  <commands xmi:id="_GzD5QM-SEemlGv65B_jh-Q" elementId="AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.RunToLineRulerActionDelegate" commandName="Run to Line" category="_kGNCHMjEEemUKsVdLWnGlw"/>
+  <commands xmi:id="_GzEgUM-SEemlGv65B_jh-Q" elementId="AUTOGEN:::org.eclipse.jdt.debug.ClassFileEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.RunToLineRulerActionDelegate" commandName="Run to Line" category="_kGNCHMjEEemUKsVdLWnGlw"/>
   <addons xmi:id="_kGNB7MjEEemUKsVdLWnGlw" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_kGNB7cjEEemUKsVdLWnGlw" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_kGNB7sjEEemUKsVdLWnGlw" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
