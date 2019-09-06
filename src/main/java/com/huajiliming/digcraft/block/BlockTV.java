@@ -43,8 +43,23 @@ public class BlockTV extends BlockContainer {
 		if (meta < 4) {
 			switch (meta) {
 			case 0:
+				if (!world.getBlock(x, y, z + 1).isOpaqueCube() || world.getBlock(x - 1, y, z) != BlockLoader.tv
+						|| world.getBlock(x + 1, y, z) != BlockLoader.tv
+						|| world.getBlock(x - 1, y + 1, z) != BlockLoader.tv
+						|| world.getBlock(x, y + 1, z) != BlockLoader.tv
+						|| world.getBlock(x + 1, y + 1, z) != BlockLoader.tv) {
+					this.dropBlockAsItem(world, x, y, z, new ItemStack(ItemLoader.tv));
+					world.setBlock(x - 1, y, z, Blocks.air, 0, 2);
+					world.setBlock(x, y, z, Blocks.air, 0, 2);
+					world.setBlock(x + 1, y, z, Blocks.air, 0, 2);
+					world.setBlock(x - 1, y + 1, z, Blocks.air, 0, 2);
+					world.setBlock(x, y + 1, z, Blocks.air, 0, 2);
+					world.setBlock(x + 1, y + 1, z, Blocks.air, 0, 2);
+				}
+				break;
 			case 1:
-				if (world.getBlock(x - 1, y, z) != BlockLoader.tv || world.getBlock(x + 1, y, z) != BlockLoader.tv
+				if (!world.getBlock(x, y, z - 1).isOpaqueCube() || world.getBlock(x - 1, y, z) != BlockLoader.tv
+						|| world.getBlock(x + 1, y, z) != BlockLoader.tv
 						|| world.getBlock(x - 1, y + 1, z) != BlockLoader.tv
 						|| world.getBlock(x, y + 1, z) != BlockLoader.tv
 						|| world.getBlock(x + 1, y + 1, z) != BlockLoader.tv) {
@@ -58,8 +73,23 @@ public class BlockTV extends BlockContainer {
 				}
 				break;
 			case 2:
+				if (!world.getBlock(x + 1, y, z).isOpaqueCube() || world.getBlock(x, y, z - 1) != BlockLoader.tv
+						|| world.getBlock(x, y, z + 1) != BlockLoader.tv
+						|| world.getBlock(x, y + 1, z - 1) != BlockLoader.tv
+						|| world.getBlock(x, y + 1, z) != BlockLoader.tv
+						|| world.getBlock(x, y + 1, z + 1) != BlockLoader.tv) {
+					this.dropBlockAsItem(world, x, y, z, new ItemStack(ItemLoader.tv));
+					world.setBlock(x, y, z, Blocks.air, 0, 2);
+					world.setBlock(x, y, z - 1, Blocks.air, 0, 2);
+					world.setBlock(x, y, z + 1, Blocks.air, 0, 2);
+					world.setBlock(x, y + 1, z - 1, Blocks.air, 0, 2);
+					world.setBlock(x, y + 1, z, Blocks.air, 0, 2);
+					world.setBlock(x, y + 1, z + 1, Blocks.air, 0, 2);
+				}
+				break;
 			case 3:
-				if (world.getBlock(x, y, z - 1) != BlockLoader.tv || world.getBlock(x, y, z + 1) != BlockLoader.tv
+				if (!world.getBlock(x - 1, y, z).isOpaqueCube() || world.getBlock(x, y, z - 1) != BlockLoader.tv
+						|| world.getBlock(x, y, z + 1) != BlockLoader.tv
 						|| world.getBlock(x, y + 1, z - 1) != BlockLoader.tv
 						|| world.getBlock(x, y + 1, z) != BlockLoader.tv
 						|| world.getBlock(x, y + 1, z + 1) != BlockLoader.tv) {
@@ -108,23 +138,31 @@ public class BlockTV extends BlockContainer {
 			switch (meta) {
 			case 8:
 			case 9:
+				if (world.getBlock(x + 1, y - 1, z) == this) {
+					this.dropBlockAsItem(world, x + 1, y - 1, z, new ItemStack(ItemLoader.tv));
+				}
 				world.setBlock(x + 1, y - 1, z, Blocks.air, 0, 2);
-//				this.dropBlockAsItem(world, x + 1, y - 1, z, new ItemStack(ItemLoader.tv));
 				break;
 			case 10:
 			case 11:
+				if (world.getBlock(x, y - 1, z + 1) == this) {
+					this.dropBlockAsItem(world, x, y - 1, z + 1, new ItemStack(ItemLoader.tv));
+				}
 				world.setBlock(x, y - 1, z + 1, Blocks.air, 0, 2);
-//				this.dropBlockAsItem(world, x, y - 1, z + 1, new ItemStack(ItemLoader.tv));
 				break;
 			case 12:
 			case 13:
+				if (world.getBlock(x - 1, y - 1, z) == this) {
+					this.dropBlockAsItem(world, x - 1, y - 1, z, new ItemStack(ItemLoader.tv));
+				}
 				world.setBlock(x - 1, y - 1, z, Blocks.air, 0, 2);
-//				this.dropBlockAsItem(world, x - 1, y - 1, z, new ItemStack(ItemLoader.tv));
 				break;
 			case 14:
 			case 15:
+				if (world.getBlock(x, y - 1, z - 1) == this) {
+					this.dropBlockAsItem(world, x, y - 1, z - 1, new ItemStack(ItemLoader.tv));
+				}
 				world.setBlock(x, y - 1, z - 1, Blocks.air, 0, 2);
-//				this.dropBlockAsItem(world, x, y - 1, z - 1, new ItemStack(ItemLoader.tv));
 				break;
 			}
 		}

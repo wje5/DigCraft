@@ -13,7 +13,6 @@ import com.huajiliming.digcraft.model.ModelBedsideTable;
 import com.huajiliming.digcraft.model.ModelCastingTable;
 import com.huajiliming.digcraft.model.ModelCrucible;
 import com.huajiliming.digcraft.model.ModelFluorescentLamp;
-import com.huajiliming.digcraft.model.ModelFridge;
 import com.huajiliming.digcraft.model.ModelGasBurner;
 import com.huajiliming.digcraft.model.ModelLittleSofa;
 import com.huajiliming.digcraft.model.ModelPan;
@@ -35,6 +34,7 @@ import com.huajiliming.digcraft.tileentity.TileEntityLittleSofa;
 import com.huajiliming.digcraft.tileentity.TileEntityLongSofa;
 import com.huajiliming.digcraft.tileentity.TileEntityLongTable;
 import com.huajiliming.digcraft.tileentity.TileEntityShoeArc;
+import com.huajiliming.digcraft.tileentity.TileEntityTV;
 import com.huajiliming.digcraft.tileentity.TileEntityToilet;
 import com.huajiliming.digcraft.tileentity.TileEntityWallSwitch;
 
@@ -102,7 +102,8 @@ public class RenderLoader {
 				new StandardBlockItemRenderer(new ModelGasBurner(), "gasBurner"));
 		MinecraftForgeClient.registerItemRenderer(ItemLoader.pan, new StandardBlockItemRenderer(new ModelPan(), "pan"));
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFridge.class, new RenderFridge());
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockLoader.fridge),
-				new StandardBlockItemRenderer(new ModelFridge(), "fridge"));
+		MinecraftForgeClient.registerItemRenderer(ItemLoader.fridge, new RenderItemFridge());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTV.class, new RenderTV());
+		MinecraftForgeClient.registerItemRenderer(ItemLoader.tv, new RenderItemTV());
 	}
 }
