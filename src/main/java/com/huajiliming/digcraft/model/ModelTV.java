@@ -17,7 +17,7 @@ public class ModelTV extends ModelBase {
 
 		bone = new ModelRenderer(this);
 		bone.setRotationPoint(0.0F, 0.0F, 0.0F);
-		bone.cubeList.add(new ModelBox(bone, 0, 0, -20.0F, -28.0F, 6.0F, 40, 24, 2, 0.0F));
+		bone.cubeList.add(new ModelBox(bone, 0, 0, -24.0F, -32.0F, 6.0F, 48, 32, 2, 0.0F));
 	}
 
 	@Override

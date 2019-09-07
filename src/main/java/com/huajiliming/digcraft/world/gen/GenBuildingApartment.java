@@ -225,6 +225,12 @@ public class GenBuildingApartment extends GenBuilding {
 			gen.setBlock(x, y, z + 11, BlockLoader.fridge, 0);
 			gen.setBlock(x, y + 1, z + 11, BlockLoader.fridge, 4);
 			gen.setBlock(x, y + 2, z + 11, BlockLoader.fridge, 8);
+			gen.setBlock(x + 4, y + 1, z + 5, BlockLoader.tv, 7);
+			gen.setBlock(x + 4, y + 1, z + 6, BlockLoader.tv, 3);
+			gen.setBlock(x + 4, y + 1, z + 7, BlockLoader.tv, 7);
+			gen.setBlock(x + 4, y + 2, z + 5, BlockLoader.tv, 11);
+			gen.setBlock(x + 4, y + 2, z + 6, BlockLoader.tv, 7);
+			gen.setBlock(x + 4, y + 2, z + 7, BlockLoader.tv, 15);
 			return true;
 		}
 

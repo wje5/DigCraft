@@ -66,9 +66,8 @@ public class TileEntityGasBurner extends StandardInventoryTileEntity implements 
 	@Override
 	public void init() {
 		Random rand = new Random();
-//		this.slots[1] = new ItemStack(ItemLoader.gasCylinder, 1,
-//				this.worldObj.rand.nextInt(ItemLoader.gasCylinder.getMaxDamage()));
-		this.slots[1] = new ItemStack(ItemLoader.gasCylinder);
+		this.slots[1] = new ItemStack(ItemLoader.gasCylinder, 1,
+				this.worldObj.rand.nextInt(ItemLoader.gasCylinder.getMaxDamage()));
 		this.updateToClient();
 	}
 }

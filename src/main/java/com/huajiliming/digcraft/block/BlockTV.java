@@ -12,6 +12,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockTV extends BlockContainer {
@@ -106,10 +107,24 @@ public class BlockTV extends BlockContainer {
 		}
 	}
 
-//	@Override
-//	public void setBlockBoundsBasedOnState(IBlockAccess world, int x, int y, int z) {
-//		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.875F, 1.0F);
-//	}
+	@Override
+	public void setBlockBoundsBasedOnState(IBlockAccess world, int x, int y, int z) {
+		int meta = world.getBlockMetadata(x, y, z);
+		switch (meta % 4) {
+		case 0:
+			this.setBlockBounds(0.0F, 0.0F, 0.875F, 1.0F, 1.0F, 1.0F);
+			break;
+		case 1:
+			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 0.125F);
+			break;
+		case 2:
+			this.setBlockBounds(0.875F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+			break;
+		case 3:
+			this.setBlockBounds(0.0F, 0.0F, 0.0F, 0.125F, 1.0F, 1.0F);
+			break;
+		}
+	}
 
 	@Override
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {

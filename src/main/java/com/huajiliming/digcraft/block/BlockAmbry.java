@@ -64,18 +64,19 @@ public class BlockAmbry extends BlockContainer {
 							j1 = itemstack.stackSize;
 						}
 						itemstack.stackSize -= j1;
-
-						EntityItem entityitem = new EntityItem(world, x + f, y + f1, z + f2,
-								new ItemStack(itemstack.getItem(), j1, itemstack.getItemDamage()));
-						if (itemstack.hasTagCompound()) {
-							entityitem.getEntityItem()
-									.setTagCompound((NBTTagCompound) itemstack.getTagCompound().copy());
+						if (itemstack != null) {
+							EntityItem entityitem = new EntityItem(world, x + f, y + f1, z + f2,
+									new ItemStack(itemstack.getItem(), j1, itemstack.getItemDamage()));
+							if (itemstack.hasTagCompound()) {
+								entityitem.getEntityItem()
+										.setTagCompound((NBTTagCompound) itemstack.getTagCompound().copy());
+							}
+							float f3 = 0.05F;
+							entityitem.motionX = ((float) rand.nextGaussian() * f3);
+							entityitem.motionY = ((float) rand.nextGaussian() * f3 + 0.2F);
+							entityitem.motionZ = ((float) rand.nextGaussian() * f3);
+							world.spawnEntityInWorld(entityitem);
 						}
-						float f3 = 0.05F;
-						entityitem.motionX = ((float) rand.nextGaussian() * f3);
-						entityitem.motionY = ((float) rand.nextGaussian() * f3 + 0.2F);
-						entityitem.motionZ = ((float) rand.nextGaussian() * f3);
-						world.spawnEntityInWorld(entityitem);
 					}
 				}
 			}
