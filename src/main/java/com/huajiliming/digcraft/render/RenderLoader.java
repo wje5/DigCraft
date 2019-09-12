@@ -5,7 +5,6 @@ import com.huajiliming.digcraft.entity.EntityBlackhole;
 import com.huajiliming.digcraft.entity.EntityGrayJadeGolem;
 import com.huajiliming.digcraft.entity.EntityRitual;
 import com.huajiliming.digcraft.entity.EntitySuckingBlock;
-import com.huajiliming.digcraft.inventory.GuiSpanner;
 import com.huajiliming.digcraft.inventory.GuiThrustMeter;
 import com.huajiliming.digcraft.item.ItemLoader;
 import com.huajiliming.digcraft.model.ModelAmbry;
@@ -17,8 +16,8 @@ import com.huajiliming.digcraft.model.ModelGasBurner;
 import com.huajiliming.digcraft.model.ModelLittleSofa;
 import com.huajiliming.digcraft.model.ModelPan;
 import com.huajiliming.digcraft.model.ModelShoeArc;
+import com.huajiliming.digcraft.model.ModelSpotLightSmall;
 import com.huajiliming.digcraft.model.ModelToilet;
-import com.huajiliming.digcraft.model.ModelWallSwitchOff;
 import com.huajiliming.digcraft.tileentity.TileEntityAmbry;
 import com.huajiliming.digcraft.tileentity.TileEntityBedsideTable;
 import com.huajiliming.digcraft.tileentity.TileEntityCastingTable;
@@ -34,9 +33,9 @@ import com.huajiliming.digcraft.tileentity.TileEntityLittleSofa;
 import com.huajiliming.digcraft.tileentity.TileEntityLongSofa;
 import com.huajiliming.digcraft.tileentity.TileEntityLongTable;
 import com.huajiliming.digcraft.tileentity.TileEntityShoeArc;
+import com.huajiliming.digcraft.tileentity.TileEntitySpotLightSmall;
 import com.huajiliming.digcraft.tileentity.TileEntityTV;
 import com.huajiliming.digcraft.tileentity.TileEntityToilet;
-import com.huajiliming.digcraft.tileentity.TileEntityWallSwitch;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -83,10 +82,6 @@ public class RenderLoader {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFluorescentLamp.class, new RenderFluorescentLamp());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockLoader.fluorescentLamp),
 				new StandardBlockItemRenderer(new ModelFluorescentLamp(), "fluorescentLamp"));
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityWallSwitch.class, new RenderWallSwitch());
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockLoader.wallSwitch),
-				new StandardBlockItemRenderer(new ModelWallSwitchOff(), "wallSwitch"));
-		MinecraftForge.EVENT_BUS.register(new GuiSpanner(Minecraft.getMinecraft()));
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityDesk.class, new RenderDesk());
 		MinecraftForgeClient.registerItemRenderer(ItemLoader.desk, new RenderItemDesk());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityToilet.class,
@@ -105,5 +100,8 @@ public class RenderLoader {
 		MinecraftForgeClient.registerItemRenderer(ItemLoader.fridge, new RenderItemFridge());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTV.class, new RenderTV());
 		MinecraftForgeClient.registerItemRenderer(ItemLoader.tv, new RenderItemTV());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySpotLightSmall.class, new RenderSpotLightSmall());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockLoader.spotLightSmall),
+				new StandardBlockItemRenderer(new ModelSpotLightSmall(), "spotLightSmall"));
 	}
 }

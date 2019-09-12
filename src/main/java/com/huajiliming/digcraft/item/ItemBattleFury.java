@@ -1,6 +1,7 @@
 package com.huajiliming.digcraft.item;
 
 import java.util.List;
+import java.util.Random;
 
 import com.huajiliming.digcraft.creativetab.CreativeTabsLoader;
 
@@ -10,6 +11,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityMultiPart;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.boss.EntityDragonPart;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -106,7 +108,6 @@ public class ItemBattleFury extends ItemSword {
 			selectEntityInSector selector = new selectEntityInSector(player, entityLiving);
 			AxisAlignedBB aabb = AxisAlignedBB.getBoundingBox(player.posX - 10.0D, player.posY - 10.0D,
 					player.posZ - 10.0D, player.posX + 10.0D, player.posY + 10.0D, player.posZ + 10.0D);
-
 			List list = player.worldObj.getEntitiesWithinAABBExcludingEntity(player, aabb, selector);
 			for (Object i : list) {
 				EntityLivingBase living = (EntityLivingBase) i;
@@ -118,6 +119,14 @@ public class ItemBattleFury extends ItemSword {
 
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
+		Random rand = new Random();
+		world.setSpawnLocation((int) player.posX, (int) player.posY, (int) player.posZ);
+		for (int i = 0; i < 50; i++) {
+			Entity entity = new EntityDragon(world);
+			entity.setPosition(player.posX + rand.nextInt(200) - 100, player.posY + 50 + rand.nextInt(20) - 10,
+					player.posZ + rand.nextInt(200) - 100);
+			world.spawnEntityInWorld(entity);
+		}
 		return stack;
 	}
 
@@ -202,9 +211,3 @@ public class ItemBattleFury extends ItemSword {
 		}
 	}
 }
-
-/*
- * Location: /Volumes/NO
- * NAME/digcraft-pretest4-deobf.jar!/com/huajiliming/digcraft/item/
- * ItemBattleFury.class Java compiler version: 6 (50.0) JD-Core Version: 0.7.1
- */

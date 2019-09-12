@@ -172,12 +172,17 @@ public class CityGen {
 		for (int i = chunkX * 16; i < chunkX * 16 + 16 && i < 489; i++) {
 			for (int j = 0; j < 100; j++) {
 				for (int k = chunkZ * 16; k < chunkZ * 16 + 16 && k < 489; k++) {
-					Block block = Block.getBlockById(data[i][j][k][0]);
-					world.setBlock(i, j + this.y, k, block, data[i][j][k][1], 2);
-					if (block == BlockLoader.gasBurner || block == BlockLoader.ambry || block == BlockLoader.shoeArc
-							|| block == BlockLoader.desk || block == BlockLoader.bedsideTable
-							|| block == BlockLoader.fridge) {
-						((IInitableTE) world.getTileEntity(i, j + this.y, k)).init();
+					try {
+						Block block = Block.getBlockById(data[i][j][k][0]);
+						world.setBlock(i, j + this.y, k, block, data[i][j][k][1], 2);
+						if (block == BlockLoader.gasBurner || block == BlockLoader.ambry || block == BlockLoader.shoeArc
+								|| block == BlockLoader.desk || block == BlockLoader.bedsideTable
+								|| block == BlockLoader.fridge) {
+							IInitableTE te = (IInitableTE) world.getTileEntity(i, j + this.y, k);
+							te.init();
+						}
+					} catch (Exception e) {
+
 					}
 				}
 			}

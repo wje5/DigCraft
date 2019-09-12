@@ -367,8 +367,6 @@ public class CraftingLoader {
 				new Object[] { "###", "#*#", "###", '#', Items.clay_ball, '*', Items.brick });
 		GameRegistry.addShapedRecipe(new ItemStack(ItemLoader.crucibleSpoon),
 				new Object[] { "  #", " * ", "*  ", '#', Items.bowl, '*', Items.stick });
-		GameRegistry.addShapedRecipe(new ItemStack(ItemLoader.spanner),
-				new Object[] { "# #", "###", " # ", '#', Items.iron_ingot });
 	}
 
 	private static void registerSmelting() {

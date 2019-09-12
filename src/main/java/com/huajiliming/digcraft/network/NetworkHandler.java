@@ -12,9 +12,5 @@ public class NetworkHandler {
 		instance.registerMessage(MessageKeyboardInput.PocketHandler.class, MessageKeyboardInput.class, nextId++,
 				Side.SERVER);
 		instance.registerMessage(MessageBookPage.PocketHandler.class, MessageBookPage.class, nextId++, Side.SERVER);
-		instance.registerMessage(MessageGetWorldObjFromId.PocketHandler.class, MessageGetWorldObjFromId.class, nextId++,
-				Side.SERVER);
-		instance.registerMessage(MessageGetWorldObjFromId.ReplyMessage.PocketHandler.class,
-				MessageGetWorldObjFromId.ReplyMessage.class, nextId++, Side.CLIENT);
 	}
 }

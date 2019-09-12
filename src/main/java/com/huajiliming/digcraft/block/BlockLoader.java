@@ -90,13 +90,14 @@ public class BlockLoader {
 	public static Block diningChair = new BlockDiningChair();
 	public static Block fluorescentLamp = new BlockFluorescentLamp().setCreativeTab(CreativeTabsLoader.tabDigcraft);
 	public static Block fluorescentLampLight = new BlockFluorescentLamp().setLightLevel(1.0F);
-	public static Block wallSwitch = new BlockWallSwitch();
 	public static Block desk = new BlockDesk();
 	public static Block toilet = new BlockToilet();
 	public static Block ambry = new BlockAmbry();
 	public static Block gasBurner = new BlockGasBurner();
 	public static Block fridge = new BlockFridge();
 	public static Block tv = new BlockTV();
+	public static Block spotLightSmall = new BlockSpotLightSmall().setCreativeTab(CreativeTabsLoader.tabDigcraft);
+	public static Block spotLightSmallLight = new BlockSpotLightSmall().setLightLevel(1.0F);
 
 	public BlockLoader(FMLPreInitializationEvent event) {
 		register(sapphireOre);
@@ -177,13 +178,14 @@ public class BlockLoader {
 		register(diningChair);
 		register(fluorescentLamp);
 		register(fluorescentLampLight, "fluorescentLampLight");
-		register(wallSwitch);
 		register(desk);
 		register(toilet);
 		register(ambry);
 		register(gasBurner);
 		register(fridge);
 		register(tv);
+		register(spotLightSmall);
+		register(spotLightSmallLight, "spotLightSmallLight");
 	}
 
 	private static void register(Block block) {

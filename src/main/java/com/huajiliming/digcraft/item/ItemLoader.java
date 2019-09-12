@@ -189,13 +189,13 @@ public class ItemLoader {
 	public static Item longTable = new ItemLongTable();
 	public static Item diningTable = new ItemDiningTable();
 	public static Item diningChair = new ItemDiningChair();
-	public static Item spanner = new ItemSpanner();
 	public static Item desk = new ItemDesk();
 	public static Item pan = new ItemPan();
 	public static Item gasCylinder = new ItemGasCylinder();
 	public static Item ATaleOfTwoCities = new ItemStandardBook("ATaleOfTwoCities");
 	public static Item fridge = new ItemFridge();
 	public static Item tv = new ItemTV();
+	public static Item paintBrush = new ItemPaintBrush();
 
 	public ItemLoader(FMLPreInitializationEvent event) {
 		register(sapphire);
@@ -371,13 +371,13 @@ public class ItemLoader {
 		register(longTable);
 		register(diningTable);
 		register(diningChair);
-		register(spanner);
 		register(desk);
 		register(pan);
 		register(gasCylinder);
 		register(ATaleOfTwoCities);
 		register(fridge);
 		register(tv);
+		register(paintBrush);
 	}
 
 	private static void register(Item item) {

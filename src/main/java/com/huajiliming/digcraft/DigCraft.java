@@ -14,7 +14,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 public class DigCraft {
 	public static final String MODID = "digcraft";
 	public static final String NAME = "Dig Craft";
-	public static final String VERSION = "1.3.4";
+	public static final String VERSION = "1.3.5";
 
 	@Instance("digcraft")
 	public static DigCraft instance;

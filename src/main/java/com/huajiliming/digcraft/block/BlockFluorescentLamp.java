@@ -1,21 +1,33 @@
 package com.huajiliming.digcraft.block;
 
-import com.huajiliming.digcraft.tileentity.IBindableTE;
 import com.huajiliming.digcraft.tileentity.TileEntityFluorescentLamp;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockFluorescentLamp extends BlockContainer implements IBindable {
+public class BlockFluorescentLamp extends BlockContainer {
 	public BlockFluorescentLamp() {
 		super(Material.circuits);
 		this.setHardness(1.0F);
 		this.setBlockName("fluorescentLamp");
 		this.setBlockTextureName("digcraft:fluorescentLamp");
+	}
+
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int face, float posX,
+			float posY, float posZ) {
+		int meta = world.getBlockMetadata(x, y, z);
+		if (meta < 8) {
+			world.setBlock(x, y, z, BlockLoader.fluorescentLampLight, meta + 8, 2);
+		} else {
+			world.setBlock(x, y, z, BlockLoader.fluorescentLamp, meta - 8, 2);
+		}
+		return true;
 	}
 
 	@Override
@@ -49,23 +61,7 @@ public class BlockFluorescentLamp extends BlockContainer implements IBindable {
 	}
 
 	@Override
-	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
-		this.unBind(world, x, y, z);
-		super.breakBlock(world, x, y, z, block, meta);
-	}
-
-	@Override
-	public boolean canBind(World world, int x, int y, int z, World bindWorld, int bindX, int bindY, int bindZ) {
-		return bindWorld.getBlock(bindX, bindY, bindZ) == BlockLoader.wallSwitch;
-	}
-
-	@Override
-	public void bind(World world, int x, int y, int z, World bindWorld, int bindX, int bindY, int bindZ) {
-		((IBindableTE) world.getTileEntity(x, y, z)).bind(bindWorld, bindX, bindY, bindZ);
-	}
-
-	@Override
-	public void unBind(World world, int x, int y, int z) {
-		((IBindableTE) world.getTileEntity(x, y, z)).unBind();
+	public Item getItem(World world, int x, int y, int z) {
+		return Item.getItemFromBlock(BlockLoader.fluorescentLamp);
 	}
 }
