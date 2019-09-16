@@ -37,7 +37,7 @@ public class RenderItemTV implements IItemRenderer {
 		}
 		GL11.glTranslatef(0.0F, -0.5F, 0.0F);
 		GL11.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
-		GL11.glScalef(0.6F, 0.6F, 0.6F);
+		GL11.glScalef(0.5F, 0.5F, 0.5F);
 		Minecraft.getMinecraft().renderEngine.bindTexture(this.texture);
 		this.model.render(null, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
 		GL11.glPopMatrix();

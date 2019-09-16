@@ -1,11 +1,18 @@
 package com.huajiliming.digcraft.block;
 
+import static net.minecraftforge.common.util.ForgeDirection.EAST;
+import static net.minecraftforge.common.util.ForgeDirection.NORTH;
+import static net.minecraftforge.common.util.ForgeDirection.SOUTH;
+import static net.minecraftforge.common.util.ForgeDirection.WEST;
+
 import com.huajiliming.digcraft.tileentity.TileEntityFluorescentLamp;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -28,6 +35,20 @@ public class BlockFluorescentLamp extends BlockContainer {
 			world.setBlock(x, y, z, BlockLoader.fluorescentLamp, meta - 8, 2);
 		}
 		return true;
+	}
+
+	@Override
+	public boolean canPlaceBlockAt(World world, int x, int y, int z) {
+		return (world.isSideSolid(x - 1, y, z, EAST)) || (world.isSideSolid(x + 1, y, z, WEST))
+				|| (world.isSideSolid(x, y, z - 1, SOUTH)) || (world.isSideSolid(x, y, z + 1, NORTH));
+	}
+
+	@Override
+	public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
+		if (world.getBlock(x, y + 1, z) == null || !world.getBlock(x, y + 1, z).isOpaqueCube()) {
+			this.dropBlockAsItem(world, x, y, z, new ItemStack(BlockLoader.fluorescentLamp));
+			world.setBlockToAir(x, y, z);
+		}
 	}
 
 	@Override

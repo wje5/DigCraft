@@ -66,7 +66,6 @@ public class BlockDiningChair extends BlockContainer {
 		} else {
 			this.setBlockBounds(0.125F, 0.0F, 0.125F, 0.875F, 0.375F, 0.875F);
 		}
-
 	}
 
 	@Override

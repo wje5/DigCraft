@@ -18,8 +18,10 @@ import com.huajiliming.digcraft.model.ModelPan;
 import com.huajiliming.digcraft.model.ModelShoeArc;
 import com.huajiliming.digcraft.model.ModelSpotLightSmall;
 import com.huajiliming.digcraft.model.ModelToilet;
+import com.huajiliming.digcraft.tileentity.TileEntityAirConditioner;
 import com.huajiliming.digcraft.tileentity.TileEntityAmbry;
 import com.huajiliming.digcraft.tileentity.TileEntityBedsideTable;
+import com.huajiliming.digcraft.tileentity.TileEntityCabinetAirConditioner;
 import com.huajiliming.digcraft.tileentity.TileEntityCastingTable;
 import com.huajiliming.digcraft.tileentity.TileEntityCrucible;
 import com.huajiliming.digcraft.tileentity.TileEntityDesk;
@@ -103,5 +105,11 @@ public class RenderLoader {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySpotLightSmall.class, new RenderSpotLightSmall());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockLoader.spotLightSmall),
 				new StandardBlockItemRenderer(new ModelSpotLightSmall(), "spotLightSmall"));
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAirConditioner.class, new RenderAirConditioner());
+		MinecraftForgeClient.registerItemRenderer(ItemLoader.airConditioner, new RenderItemAirConditioner());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCabinetAirConditioner.class,
+				new RenderCabinetAirConditioner());
+		MinecraftForgeClient.registerItemRenderer(ItemLoader.cabinetAirConditioner,
+				new RenderItemCabinetAirConditioner());
 	}
 }

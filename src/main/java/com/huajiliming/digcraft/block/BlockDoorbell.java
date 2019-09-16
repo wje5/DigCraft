@@ -76,15 +76,6 @@ public class BlockDoorbell extends BlockContainer {
 		}
 	}
 
-	private boolean canPlace(World world, int x, int y, int z) {
-		if (World.doesBlockHaveSolidTopSurface(world, x, y, z)) {
-			return true;
-		} else {
-			Block block = world.getBlock(x, y, z);
-			return block.canPlaceTorchOnTop(world, x, y, z);
-		}
-	}
-
 	@Override
 	public boolean canPlaceBlockOnSide(World world, int x, int y, int z, int p_149707_5_) {
 		ForgeDirection dir = ForgeDirection.getOrientation(p_149707_5_);

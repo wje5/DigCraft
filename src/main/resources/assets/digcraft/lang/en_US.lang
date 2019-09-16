@@ -182,6 +182,7 @@ item.ATaleOfTwoCities.name=A Tale Of Two Cities
 item.fridge.name=Fridge
 item.tv.name=TV
 item.printBrash.name=Paint Brash
+item.airConditioner.name=Air Conditioner
 
 tile.sapphireOre.name=Sapphire Ore
 tile.rubyOre.name=Ruby Ore
@@ -263,6 +264,7 @@ tile.toilet.name=Toilet
 tile.ambry.name=Ambry
 tile.gasBurner.name=Gas Burner
 tile.fridge.name=Fridge
+tile.airConditioner.name=Air Conditioner
 
 fluid.meltIron=Melt Iron
 

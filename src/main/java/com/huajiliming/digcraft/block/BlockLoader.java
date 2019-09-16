@@ -98,6 +98,9 @@ public class BlockLoader {
 	public static Block tv = new BlockTV();
 	public static Block spotLightSmall = new BlockSpotLightSmall().setCreativeTab(CreativeTabsLoader.tabDigcraft);
 	public static Block spotLightSmallLight = new BlockSpotLightSmall().setLightLevel(1.0F);
+	public static Block airConditioner = new BlockAirConditioner();
+	public static Block cabinetAirConditioner = new BlockCabinetAirConditioner();
+	public static Block largeBed = new BlockLargeBed();
 
 	public BlockLoader(FMLPreInitializationEvent event) {
 		register(sapphireOre);
@@ -186,6 +189,9 @@ public class BlockLoader {
 		register(tv);
 		register(spotLightSmall);
 		register(spotLightSmallLight, "spotLightSmallLight");
+		register(airConditioner);
+		register(cabinetAirConditioner);
+		register(largeBed);
 	}
 
 	private static void register(Block block) {

@@ -182,6 +182,7 @@ item.ATaleOfTwoCities.name=双城记
 item.fridge.name=冰箱
 item.tv.name=TV
 item.printBrash.name=油漆刷
+item.airConditioner.name=空调
 
 tile.sapphireOre.name=蓝宝石矿石
 tile.rubyOre.name=红宝石矿石
@@ -263,6 +264,7 @@ tile.toilet.name=马桶
 tile.ambry.name=橱柜
 tile.gasBurner.name=燃气灶
 tile.fridge.name=冰箱
+tile.airConditioner.name=空调
 
 fluid.meltIron=熔融铁
 

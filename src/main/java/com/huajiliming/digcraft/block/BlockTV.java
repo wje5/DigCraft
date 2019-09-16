@@ -44,7 +44,8 @@ public class BlockTV extends BlockContainer {
 		if (meta < 4) {
 			switch (meta) {
 			case 0:
-				if (!world.getBlock(x, y, z + 1).isOpaqueCube() || world.getBlock(x - 1, y, z) != BlockLoader.tv
+				if (world.getBlock(x, y, z + 1) == null || !world.getBlock(x, y, z + 1).isOpaqueCube()
+						|| world.getBlock(x - 1, y, z) != BlockLoader.tv
 						|| world.getBlock(x + 1, y, z) != BlockLoader.tv
 						|| world.getBlock(x - 1, y + 1, z) != BlockLoader.tv
 						|| world.getBlock(x, y + 1, z) != BlockLoader.tv
@@ -59,7 +60,8 @@ public class BlockTV extends BlockContainer {
 				}
 				break;
 			case 1:
-				if (!world.getBlock(x, y, z - 1).isOpaqueCube() || world.getBlock(x - 1, y, z) != BlockLoader.tv
+				if (world.getBlock(x, y, z - 1) == null || !world.getBlock(x, y, z - 1).isOpaqueCube()
+						|| world.getBlock(x - 1, y, z) != BlockLoader.tv
 						|| world.getBlock(x + 1, y, z) != BlockLoader.tv
 						|| world.getBlock(x - 1, y + 1, z) != BlockLoader.tv
 						|| world.getBlock(x, y + 1, z) != BlockLoader.tv
@@ -74,7 +76,8 @@ public class BlockTV extends BlockContainer {
 				}
 				break;
 			case 2:
-				if (!world.getBlock(x + 1, y, z).isOpaqueCube() || world.getBlock(x, y, z - 1) != BlockLoader.tv
+				if (world.getBlock(x + 1, y, z) == null || !world.getBlock(x + 1, y, z).isOpaqueCube()
+						|| world.getBlock(x, y, z - 1) != BlockLoader.tv
 						|| world.getBlock(x, y, z + 1) != BlockLoader.tv
 						|| world.getBlock(x, y + 1, z - 1) != BlockLoader.tv
 						|| world.getBlock(x, y + 1, z) != BlockLoader.tv
@@ -89,7 +92,8 @@ public class BlockTV extends BlockContainer {
 				}
 				break;
 			case 3:
-				if (!world.getBlock(x - 1, y, z).isOpaqueCube() || world.getBlock(x, y, z - 1) != BlockLoader.tv
+				if (world.getBlock(x - 1, y, z + 1) == null || !world.getBlock(x - 1, y, z).isOpaqueCube()
+						|| world.getBlock(x, y, z - 1) != BlockLoader.tv
 						|| world.getBlock(x, y, z + 1) != BlockLoader.tv
 						|| world.getBlock(x, y + 1, z - 1) != BlockLoader.tv
 						|| world.getBlock(x, y + 1, z) != BlockLoader.tv

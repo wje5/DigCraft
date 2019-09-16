@@ -1,7 +1,5 @@
 package com.huajiliming.digcraft.tileentity;
 
-import java.util.Random;
-
 import com.huajiliming.digcraft.item.ItemLoader;
 
 import net.minecraft.item.ItemFood;
@@ -65,7 +63,6 @@ public class TileEntityGasBurner extends StandardInventoryTileEntity implements 
 
 	@Override
 	public void init() {
-		Random rand = new Random();
 		this.slots[1] = new ItemStack(ItemLoader.gasCylinder, 1,
 				this.worldObj.rand.nextInt(ItemLoader.gasCylinder.getMaxDamage()));
 		this.updateToClient();

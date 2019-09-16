@@ -4143,3 +4143,61 @@ Caused by: org.eclipse.core.internal.resources.ResourceException: Invalid projec
 
 !ENTRY org.eclipse.help.base 2 0 2019-09-05 18:36:40.918
 !MESSAGE Unable to consume Lucene index from bundle 'org.eclipse.wst.sse.doc.user_1.2.0.v201903222120 [429]'. The index should be rebuilt with Lucene 8.0.0
+!SESSION 2019-09-13 08:26:43.901 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_211
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/eye/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Volumes/NO NAME/workspace/DigCraft/eclipse -product org.eclipse.epp.package.java.product -keyring /Users/eye/.eclipse_keyring
+
+!ENTRY org.eclipse.egit.core 1 0 2019-09-13 08:26:48.657
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2019-09-13 08:27:02.088
+!MESSAGE java.nio.channels.OverlappingFileLockException
+!STACK 0
+java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1107)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.eclipse.oomph.base.util.BaseUtil.execute(BaseUtil.java:275)
+	at org.eclipse.oomph.setup.internal.core.SetupContext.associate(SetupContext.java:391)
+	at org.eclipse.oomph.setup.internal.core.SetupContext.createSelf(SetupContext.java:268)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:666)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$5(SetupUIPlugin.java:415)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:252)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-09-13 08:27:09.489
+!MESSAGE No repository found at http://www.ahtik.com/eclipse-update/.
+!SESSION 2019-09-13 09:52:36.092 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_211
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/eye/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /Volumes/NO NAME/workspace/DigCraft/eclipse -product org.eclipse.epp.package.java.product -keyring /Users/eye/.eclipse_keyring
+
+!ENTRY org.eclipse.egit.core 1 0 2019-09-13 09:52:40.898
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2019-09-13 09:52:55.618
+!MESSAGE java.nio.channels.OverlappingFileLockException
+!STACK 0
+java.nio.channels.OverlappingFileLockException
+	at sun.nio.ch.SharedFileLockTable.checkList(FileLockTable.java:255)
+	at sun.nio.ch.SharedFileLockTable.add(FileLockTable.java:152)
+	at sun.nio.ch.FileChannelImpl.tryLock(FileChannelImpl.java:1107)
+	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
+	at org.eclipse.oomph.base.util.BaseUtil.execute(BaseUtil.java:275)
+	at org.eclipse.oomph.setup.internal.core.SetupContext.associate(SetupContext.java:391)
+	at org.eclipse.oomph.setup.internal.core.SetupContext.createSelf(SetupContext.java:268)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:666)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$5(SetupUIPlugin.java:415)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:252)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2019-09-13 09:53:02.369
+!MESSAGE No repository found at http://www.ahtik.com/eclipse-update/.
