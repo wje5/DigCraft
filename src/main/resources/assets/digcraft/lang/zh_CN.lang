@@ -183,6 +183,7 @@ item.fridge.name=冰箱
 item.tv.name=TV
 item.printBrash.name=油漆刷
 item.airConditioner.name=空调
+item.bathtub.name=浴缸
 
 tile.sapphireOre.name=蓝宝石矿石
 tile.rubyOre.name=红宝石矿石
@@ -265,6 +266,7 @@ tile.ambry.name=橱柜
 tile.gasBurner.name=燃气灶
 tile.fridge.name=冰箱
 tile.airConditioner.name=空调
+item.bathtub.name=浴缸
 
 fluid.meltIron=熔融铁
 

@@ -308,6 +308,12 @@ public class GenBuildingApartment extends GenBuilding {
 			gen.setBlock(x + 24, y + 3, z + 12, BlockLoader.cabinetAirConditioner, 9);
 			gen.setBlock(x + 20, y + 4, z + 10, BlockLoader.airConditioner, 3);
 			gen.setBlock(x + 20, y + 4, z + 9, BlockLoader.airConditioner, 11);
+			gen.setBlock(x + 22, y + 1, z + 5, Blocks.bed, 10);
+			gen.setBlock(x + 22, y + 1, z + 6, Blocks.bed, 2);
+			gen.setBlock(x + 23, y + 1, z + 5, Blocks.bed, 10);
+			gen.setBlock(x + 23, y + 1, z + 6, Blocks.bed, 2);
+			gen.setBlock(x + 13, y + 1, z + 5, BlockLoader.bathtub, 8);
+			gen.setBlock(x + 14, y + 1, z + 5, BlockLoader.bathtub, 0);
 			return true;
 		}
 

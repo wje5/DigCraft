@@ -100,7 +100,7 @@ public class BlockLoader {
 	public static Block spotLightSmallLight = new BlockSpotLightSmall().setLightLevel(1.0F);
 	public static Block airConditioner = new BlockAirConditioner();
 	public static Block cabinetAirConditioner = new BlockCabinetAirConditioner();
-	public static Block largeBed = new BlockLargeBed();
+	public static Block bathtub = new BlockBathtub();
 
 	public BlockLoader(FMLPreInitializationEvent event) {
 		register(sapphireOre);
@@ -191,7 +191,7 @@ public class BlockLoader {
 		register(spotLightSmallLight, "spotLightSmallLight");
 		register(airConditioner);
 		register(cabinetAirConditioner);
-		register(largeBed);
+		register(bathtub);
 	}
 
 	private static void register(Block block) {

@@ -20,6 +20,7 @@ import com.huajiliming.digcraft.model.ModelSpotLightSmall;
 import com.huajiliming.digcraft.model.ModelToilet;
 import com.huajiliming.digcraft.tileentity.TileEntityAirConditioner;
 import com.huajiliming.digcraft.tileentity.TileEntityAmbry;
+import com.huajiliming.digcraft.tileentity.TileEntityBathtub;
 import com.huajiliming.digcraft.tileentity.TileEntityBedsideTable;
 import com.huajiliming.digcraft.tileentity.TileEntityCabinetAirConditioner;
 import com.huajiliming.digcraft.tileentity.TileEntityCastingTable;
@@ -111,5 +112,7 @@ public class RenderLoader {
 				new RenderCabinetAirConditioner());
 		MinecraftForgeClient.registerItemRenderer(ItemLoader.cabinetAirConditioner,
 				new RenderItemCabinetAirConditioner());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBathtub.class, new RenderBathtub());
+		MinecraftForgeClient.registerItemRenderer(ItemLoader.bathtub, new RenderItemBathtub());
 	}
 }
