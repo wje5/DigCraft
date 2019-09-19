@@ -92,29 +92,8 @@ public class BlockDiningTable extends BlockContainer {
 
 	@Override
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
-		if (meta < 8) {
-			switch (meta) {
-			case 0:
-				world.setBlock(x - 1, y, z, Blocks.air, 0, 2);
-				world.setBlock(x, y, z - 1, Blocks.air, 0, 2);
-				world.setBlock(x - 1, y, z - 1, Blocks.air, 0, 2);
-				break;
-			case 1:
-				world.setBlock(x + 1, y, z, Blocks.air, 0, 2);
-				world.setBlock(x, y, z + 1, Blocks.air, 0, 2);
-				world.setBlock(x + 1, y, z + 1, Blocks.air, 0, 2);
-				break;
-			case 2:
-				world.setBlock(x - 1, y, z, Blocks.air, 0, 2);
-				world.setBlock(x, y, z + 1, Blocks.air, 0, 2);
-				world.setBlock(x - 1, y, z + 1, Blocks.air, 0, 2);
-				break;
-			case 3:
-				world.setBlock(x + 1, y, z, Blocks.air, 0, 2);
-				world.setBlock(x, y, z - 1, Blocks.air, 0, 2);
-				world.setBlock(x + 1, y, z - 1, Blocks.air, 0, 2);
-				break;
-			}
+		if (meta == 3) {
+			world.setBlock(x + 1, y, z, Blocks.air, 0, 2);
 		}
 		super.breakBlock(world, x, y, z, block, meta);
 	}

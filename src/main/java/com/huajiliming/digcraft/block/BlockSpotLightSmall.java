@@ -67,7 +67,7 @@ public class BlockSpotLightSmall extends BlockContainer {
 
 	@Override
 	public boolean canPlaceBlockOnSide(World world, int x, int y, int z, int face) {
-		return face == 0 ? this.canPlaceBlockAt(world, x, y, z) : false;
+		return face == 0;
 	}
 
 	@Override

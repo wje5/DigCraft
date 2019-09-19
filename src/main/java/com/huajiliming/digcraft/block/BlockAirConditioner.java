@@ -80,14 +80,16 @@ public class BlockAirConditioner extends BlockContainer {
 		if (meta < 8) {
 			switch (meta) {
 			case 0:
-			case 1:
 				world.setBlockToAir(x - 1, y, z);
+				break;
+			case 1:
 				world.setBlockToAir(x + 1, y, z);
 				break;
 			case 2:
+				world.setBlockToAir(x, y, z + 1);
+				break;
 			case 3:
 				world.setBlockToAir(x, y, z - 1);
-				world.setBlockToAir(x, y, z + 1);
 				break;
 			}
 		}

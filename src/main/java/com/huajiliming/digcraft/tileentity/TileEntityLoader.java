@@ -30,6 +30,7 @@ public class TileEntityLoader {
 		this.registerTileEntity(TileEntityAirConditioner.class, "AirConditioner");
 		this.registerTileEntity(TileEntityCabinetAirConditioner.class, "CabinetAirConditioner");
 		this.registerTileEntity(TileEntityBathtub.class, "Bathtub");
+		this.registerTileEntity(TileEntityGlassDoor.class, "GlassDoor");
 	}
 
 	public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id) {

@@ -199,6 +199,7 @@ public class ItemLoader {
 	public static Item airConditioner = new ItemAirConditioner();
 	public static Item cabinetAirConditioner = new ItemCabinetAirConditioner();
 	public static Item bathtub = new ItemBathtub();
+	public static Item glassDoor = new ItemGlassDoor();
 
 	public ItemLoader(FMLPreInitializationEvent event) {
 		register(sapphire);
@@ -384,6 +385,7 @@ public class ItemLoader {
 		register(airConditioner);
 		register(cabinetAirConditioner);
 		register(bathtub);
+		register(glassDoor);
 	}
 
 	private static void register(Item item) {

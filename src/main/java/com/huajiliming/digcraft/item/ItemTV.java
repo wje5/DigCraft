@@ -78,7 +78,10 @@ public class ItemTV extends Item {
 			case 5:
 				if (this.trySetBlock(world, x + 1, y, z - 1, 7, face, player, stack)
 						&& this.trySetBlock(world, x + 1, y, z, 3, face, player, stack)
-						&& this.trySetBlock(world, x + 1, y, z + 1, 7, face, player, stack)) {
+						&& this.trySetBlock(world, x + 1, y, z + 1, 7, face, player, stack)
+						&& this.trySetBlock(world, x + 1, y + 1, z - 1, 6, face, player, stack)
+						&& this.trySetBlock(world, x + 1, y + 1, z, 6, face, player, stack)
+						&& this.trySetBlock(world, x + 1, y + 1, z + 1, 6, face, player, stack)) {
 					world.setBlock(x + 1, y, z - 1, BlockLoader.tv, 7, 2);
 					world.setBlock(x + 1, y, z, BlockLoader.tv, 3, 2);
 					world.setBlock(x + 1, y, z + 1, BlockLoader.tv, 7, 2);

@@ -101,6 +101,7 @@ public class BlockLoader {
 	public static Block airConditioner = new BlockAirConditioner();
 	public static Block cabinetAirConditioner = new BlockCabinetAirConditioner();
 	public static Block bathtub = new BlockBathtub();
+	public static Block glassDoor = new BlockGlassDoor();
 
 	public BlockLoader(FMLPreInitializationEvent event) {
 		register(sapphireOre);
@@ -192,6 +193,7 @@ public class BlockLoader {
 		register(airConditioner);
 		register(cabinetAirConditioner);
 		register(bathtub);
+		register(glassDoor);
 	}
 
 	private static void register(Block block) {

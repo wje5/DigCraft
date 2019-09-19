@@ -183,7 +183,9 @@ item.fridge.name=Fridge
 item.tv.name=TV
 item.printBrash.name=Paint Brash
 item.airConditioner.name=Air Conditioner
+item.cabinetAirConditioner.name=Cabinet Air Conditioner
 item.bathtub.name=Bathtub
+item.glassDoor.name=Glass Door
 
 tile.sapphireOre.name=Sapphire Ore
 tile.rubyOre.name=Ruby Ore
@@ -266,7 +268,9 @@ tile.ambry.name=Ambry
 tile.gasBurner.name=Gas Burner
 tile.fridge.name=Fridge
 tile.airConditioner.name=Air Conditioner
+tile.cabinetAirConditioner.name=Cabinet Air Conditioner
 tile.bathtub.name=Bathtub
+tile.glassDoor.name=Glass Door
 
 fluid.meltIron=Melt Iron
 

@@ -32,6 +32,7 @@ import com.huajiliming.digcraft.tileentity.TileEntityDoorbell;
 import com.huajiliming.digcraft.tileentity.TileEntityFluorescentLamp;
 import com.huajiliming.digcraft.tileentity.TileEntityFridge;
 import com.huajiliming.digcraft.tileentity.TileEntityGasBurner;
+import com.huajiliming.digcraft.tileentity.TileEntityGlassDoor;
 import com.huajiliming.digcraft.tileentity.TileEntityLittleSofa;
 import com.huajiliming.digcraft.tileentity.TileEntityLongSofa;
 import com.huajiliming.digcraft.tileentity.TileEntityLongTable;
@@ -114,5 +115,6 @@ public class RenderLoader {
 				new RenderItemCabinetAirConditioner());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBathtub.class, new RenderBathtub());
 		MinecraftForgeClient.registerItemRenderer(ItemLoader.bathtub, new RenderItemBathtub());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGlassDoor.class, new RenderGlassDoor());
 	}
 }

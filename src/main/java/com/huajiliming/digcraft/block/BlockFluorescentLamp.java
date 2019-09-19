@@ -1,10 +1,5 @@
 package com.huajiliming.digcraft.block;
 
-import static net.minecraftforge.common.util.ForgeDirection.EAST;
-import static net.minecraftforge.common.util.ForgeDirection.NORTH;
-import static net.minecraftforge.common.util.ForgeDirection.SOUTH;
-import static net.minecraftforge.common.util.ForgeDirection.WEST;
-
 import com.huajiliming.digcraft.tileentity.TileEntityFluorescentLamp;
 
 import net.minecraft.block.Block;
@@ -35,12 +30,6 @@ public class BlockFluorescentLamp extends BlockContainer {
 			world.setBlock(x, y, z, BlockLoader.fluorescentLamp, meta - 8, 2);
 		}
 		return true;
-	}
-
-	@Override
-	public boolean canPlaceBlockAt(World world, int x, int y, int z) {
-		return (world.isSideSolid(x - 1, y, z, EAST)) || (world.isSideSolid(x + 1, y, z, WEST))
-				|| (world.isSideSolid(x, y, z - 1, SOUTH)) || (world.isSideSolid(x, y, z + 1, NORTH));
 	}
 
 	@Override
@@ -78,7 +67,7 @@ public class BlockFluorescentLamp extends BlockContainer {
 
 	@Override
 	public boolean canPlaceBlockOnSide(World world, int x, int y, int z, int face) {
-		return face == 0 ? this.canPlaceBlockAt(world, x, y, z) : false;
+		return face == 0;
 	}
 
 	@Override
