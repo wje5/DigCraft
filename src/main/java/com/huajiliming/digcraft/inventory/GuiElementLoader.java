@@ -2,6 +2,7 @@ package com.huajiliming.digcraft.inventory;
 
 import com.huajiliming.digcraft.DigCraft;
 import com.huajiliming.digcraft.tileentity.TileEntityAmbry;
+import com.huajiliming.digcraft.tileentity.TileEntityArk;
 import com.huajiliming.digcraft.tileentity.TileEntityBurningBox;
 import com.huajiliming.digcraft.tileentity.TileEntityFridge;
 import com.huajiliming.digcraft.tileentity.TileEntitySmelter;
@@ -17,6 +18,7 @@ public class GuiElementLoader implements IGuiHandler {
 	public static final int GUI_AMBRY = 3;
 	public static final int GUI_FRIDGEBIG = 4;
 	public static final int GUI_FRIDGESMALL = 5;
+	public static final int GUI_ARK = 6;
 
 	public GuiElementLoader() {
 		NetworkRegistry.INSTANCE.registerGuiHandler(DigCraft.instance, this);
@@ -35,6 +37,8 @@ public class GuiElementLoader implements IGuiHandler {
 			return new ContainerFridgeBig(player, (TileEntityFridge) world.getTileEntity(x, y, z));
 		case GUI_FRIDGESMALL:
 			return new ContainerFridgeSmall(player, (TileEntityFridge) world.getTileEntity(x, y, z));
+		case GUI_ARK:
+			return new ContainerArk(player, (TileEntityArk) world.getTileEntity(x, y, z));
 		}
 		return null;
 	}
@@ -56,6 +60,8 @@ public class GuiElementLoader implements IGuiHandler {
 		case GUI_FRIDGESMALL:
 			return new GuiContainerFridgeSmall(
 					new ContainerFridgeSmall(player, (TileEntityFridge) world.getTileEntity(x, y, z)));
+		case GUI_ARK:
+			return new GuiContainerArk(new ContainerArk(player, (TileEntityArk) world.getTileEntity(x, y, z)));
 		}
 		return null;
 	}

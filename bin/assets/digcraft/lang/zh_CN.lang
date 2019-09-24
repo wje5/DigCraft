@@ -186,6 +186,7 @@ item.airConditioner.name=空调
 item.cabinetAirConditioner.name=柜式空调
 item.bathtub.name=浴缸
 item.glassDoor.name=玻璃门
+item.washBasin.name=洗手台
 
 tile.sapphireOre.name=蓝宝石矿石
 tile.rubyOre.name=红宝石矿石
@@ -271,6 +272,8 @@ tile.airConditioner.name=空调
 tile.cabinetAirConditioner.name=柜式空调
 tile.bathtub.name=浴缸
 tile.glassDoor.name=玻璃门
+tile.washBasin.name=洗手台
+tile.ark.name=台柜
 
 fluid.meltIron=熔融铁
 
@@ -296,6 +299,7 @@ container.desk=书桌
 container.ambry=橱柜
 container.gasBurner=煤气灶
 container.fridge=冰箱
+container.ark.name=台柜
 
 nei.recipe.blackhole.name=能量灌注
 nei.recipe.smelter.name=精炼台

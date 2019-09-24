@@ -8,6 +8,7 @@ import com.huajiliming.digcraft.entity.EntitySuckingBlock;
 import com.huajiliming.digcraft.inventory.GuiThrustMeter;
 import com.huajiliming.digcraft.item.ItemLoader;
 import com.huajiliming.digcraft.model.ModelAmbry;
+import com.huajiliming.digcraft.model.ModelArk;
 import com.huajiliming.digcraft.model.ModelBedsideTable;
 import com.huajiliming.digcraft.model.ModelCastingTable;
 import com.huajiliming.digcraft.model.ModelCrucible;
@@ -20,6 +21,7 @@ import com.huajiliming.digcraft.model.ModelSpotLightSmall;
 import com.huajiliming.digcraft.model.ModelToilet;
 import com.huajiliming.digcraft.tileentity.TileEntityAirConditioner;
 import com.huajiliming.digcraft.tileentity.TileEntityAmbry;
+import com.huajiliming.digcraft.tileentity.TileEntityArk;
 import com.huajiliming.digcraft.tileentity.TileEntityBathtub;
 import com.huajiliming.digcraft.tileentity.TileEntityBedsideTable;
 import com.huajiliming.digcraft.tileentity.TileEntityCabinetAirConditioner;
@@ -40,6 +42,7 @@ import com.huajiliming.digcraft.tileentity.TileEntityShoeArc;
 import com.huajiliming.digcraft.tileentity.TileEntitySpotLightSmall;
 import com.huajiliming.digcraft.tileentity.TileEntityTV;
 import com.huajiliming.digcraft.tileentity.TileEntityToilet;
+import com.huajiliming.digcraft.tileentity.TileEntityWashBasin;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -116,5 +119,12 @@ public class RenderLoader {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBathtub.class, new RenderBathtub());
 		MinecraftForgeClient.registerItemRenderer(ItemLoader.bathtub, new RenderItemBathtub());
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGlassDoor.class, new RenderGlassDoor());
+		MinecraftForgeClient.registerItemRenderer(ItemLoader.glassDoor, new RenderItemGlassDoor());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityWashBasin.class, new RenderWashBasin());
+		MinecraftForgeClient.registerItemRenderer(ItemLoader.washBasin, new RenderItemWashBasin());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityArk.class,
+				new StandardBlockRenderer(new ModelArk(), "ark", true));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockLoader.ark),
+				new StandardBlockItemRenderer(new ModelArk(), "ark"));
 	}
 }

@@ -21,7 +21,7 @@ public class BlockGlassDoor extends BlockContainer {
 		super(Material.glass);
 		this.setHardness(1.0F);
 		this.setBlockName("glassDoor");
-		this.setBlockTextureName("digcraft:glassDoor");
+		this.setBlockTextureName("minecraft:glass_pane_top");
 	}
 
 	@Override
@@ -36,23 +36,41 @@ public class BlockGlassDoor extends BlockContainer {
 		} else if (meta < 12) {
 			switch (meta) {
 			case 8:
+				meta = world.getBlockMetadata(x + 1, y + 1, z);
+				world.setBlockMetadataWithNotify(x + 1, y + 1, z, meta < 6 ? meta + 2 : meta - 2, 2);
+				break;
+			case 9:
+				meta = world.getBlockMetadata(x - 1, y + 1, z);
+				world.setBlockMetadataWithNotify(x - 1, y + 1, z, meta < 6 ? meta + 2 : meta - 2, 2);
+				break;
+			case 10:
+				meta = world.getBlockMetadata(x, y + 1, z - 1);
+				world.setBlockMetadataWithNotify(x, y + 1, z - 1, meta < 6 ? meta + 2 : meta - 2, 2);
+				break;
+			case 11:
+				meta = world.getBlockMetadata(x, y + 1, z + 1);
+				world.setBlockMetadataWithNotify(x, y + 1, z + 1, meta < 6 ? meta + 2 : meta - 2, 2);
+				break;
+			}
+		} else {
+			switch (meta) {
+			case 12:
 				meta = world.getBlockMetadata(x + 1, y, z);
 				world.setBlockMetadataWithNotify(x + 1, y, z, meta < 6 ? meta + 2 : meta - 2, 2);
 				break;
-			case 9:
+			case 13:
 				meta = world.getBlockMetadata(x - 1, y, z);
 				world.setBlockMetadataWithNotify(x - 1, y, z, meta < 6 ? meta + 2 : meta - 2, 2);
 				break;
-			case 10:
+			case 14:
 				meta = world.getBlockMetadata(x, y, z - 1);
 				world.setBlockMetadataWithNotify(x, y, z - 1, meta < 6 ? meta + 2 : meta - 2, 2);
 				break;
-			case 11:
+			case 15:
 				meta = world.getBlockMetadata(x, y, z + 1);
 				world.setBlockMetadataWithNotify(x, y, z + 1, meta < 6 ? meta + 2 : meta - 2, 2);
 				break;
 			}
-
 		}
 		return true;
 	}
@@ -132,29 +150,87 @@ public class BlockGlassDoor extends BlockContainer {
 			if (meta < 2) {
 				this.setBlockBounds(0.0F, 0.0F, 0.25F, 1.0F, 1.0F, 0.75F);
 			} else {
-				this.setBlockBounds(0.25F, 0.0F, 1.0F, 0.75F, 1.0F, 1.0F);
+				this.setBlockBounds(0.25F, 0.0F, 0.0F, 0.75F, 1.0F, 1.0F);
 			}
 		} else if (meta < 8) {
 			if (meta % 2 == 0) {
 				this.setBlockBounds(0.0F, 0.0F, 0.25F, 1.0F, 1.0F, 0.75F);
 			} else {
-				this.setBlockBounds(0.25F, 0.0F, 1.0F, 0.75F, 1.0F, 1.0F);
+				this.setBlockBounds(0.25F, 0.0F, 0.0F, 0.75F, 1.0F, 1.0F);
 			}
 		} else {
-			switch (meta % 4) {
-			case 0:
-				this.setBlockBounds(0.75F, 0.0F, 0.25F, 1.0F, 1.0F, 0.75F);
+			switch (meta) {
+			case 8:
+				if (world.getBlockMetadata(x + 1, y + 1, z) >= 6) {
+					this.setBlockBounds(0.0F, 0.0F, 0.25F, 1.0F, 1.0F, 0.75F);
+				} else {
+					this.setBlockBounds(0.75F, 0.0F, 0.25F, 1.0F, 1.0F, 0.75F);
+				}
 				break;
-			case 1:
-				this.setBlockBounds(0.0F, 0.0F, 0.25F, 0.25F, 1.0F, 0.75F);
+			case 9:
+				if (world.getBlockMetadata(x - 1, y + 1, z) >= 6) {
+					this.setBlockBounds(0.0F, 0.0F, 0.25F, 1.0F, 1.0F, 0.75F);
+				} else {
+					this.setBlockBounds(0.0F, 0.0F, 0.25F, 0.25F, 1.0F, 0.75F);
+				}
 				break;
-			case 2:
-				this.setBlockBounds(0.25F, 0.0F, 0.0F, 0.75F, 1.0F, 0.25F);
+			case 10:
+				if (world.getBlockMetadata(x, y + 1, z - 1) >= 6) {
+					this.setBlockBounds(0.25F, 0.0F, 0.0F, 0.75F, 1.0F, 1.0F);
+				} else {
+					this.setBlockBounds(0.25F, 0.0F, 0.0F, 0.75F, 1.0F, 0.25F);
+				}
 				break;
-			case 3:
-				this.setBlockBounds(0.25F, 0.0F, 0.75F, 0.75F, 1.0F, 1.0F);
+			case 11:
+				if (world.getBlockMetadata(x, y + 1, z + 1) >= 6) {
+					this.setBlockBounds(0.25F, 0.0F, 0.0F, 0.75F, 1.0F, 1.0F);
+				} else {
+					this.setBlockBounds(0.25F, 0.0F, 0.75F, 0.75F, 1.0F, 1.0F);
+				}
+				break;
+			case 12:
+				if (world.getBlockMetadata(x + 1, y, z) >= 6) {
+					this.setBlockBounds(0.0F, 0.0F, 0.25F, 1.0F, 1.0F, 0.75F);
+				} else {
+					this.setBlockBounds(0.75F, 0.0F, 0.25F, 1.0F, 1.0F, 0.75F);
+				}
+				break;
+			case 13:
+				if (world.getBlockMetadata(x - 1, y, z) >= 6) {
+					this.setBlockBounds(0.0F, 0.0F, 0.25F, 1.0F, 1.0F, 0.75F);
+				} else {
+					this.setBlockBounds(0.0F, 0.0F, 0.25F, 0.25F, 1.0F, 0.75F);
+				}
+				break;
+			case 14:
+				if (world.getBlockMetadata(x, y, z - 1) >= 6) {
+					this.setBlockBounds(0.25F, 0.0F, 0.0F, 0.75F, 1.0F, 1.0F);
+				} else {
+					this.setBlockBounds(0.25F, 0.0F, 0.0F, 0.75F, 1.0F, 0.25F);
+				}
+				break;
+			case 15:
+				if (world.getBlockMetadata(x, y, z + 1) >= 6) {
+					this.setBlockBounds(0.25F, 0.0F, 0.0F, 0.75F, 1.0F, 1.0F);
+				} else {
+					this.setBlockBounds(0.25F, 0.0F, 0.75F, 0.75F, 1.0F, 1.0F);
+				}
 				break;
 			}
+//			switch (meta % 4) {
+//			case 0:
+//				this.setBlockBounds(0.75F, 0.0F, 0.25F, 1.0F, 1.0F, 0.75F);
+//				break;
+//			case 1:
+//				this.setBlockBounds(0.0F, 0.0F, 0.25F, 0.25F, 1.0F, 0.75F);
+//				break;
+//			case 2:
+//				this.setBlockBounds(0.25F, 0.0F, 0.0F, 0.75F, 1.0F, 0.25F);
+//				break;
+//			case 3:
+//				this.setBlockBounds(0.25F, 0.0F, 0.75F, 0.75F, 1.0F, 1.0F);
+//				break;
+//			}
 		}
 	}
 

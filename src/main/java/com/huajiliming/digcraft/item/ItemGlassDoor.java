@@ -52,7 +52,7 @@ public class ItemGlassDoor extends Item {
 					&& this.trySetBlock(world, x, y, z + 1, 1, face, player, stack)
 					&& this.trySetBlock(world, x + 1, y + 1, z + 1, 5, face, player, stack)
 					&& this.trySetBlock(world, x, y + 1, z + 1, 5, face, player, stack)) {
-				world.setBlock(x + 1, y, z + 1, BlockLoader.glassDoor, 8, 2);
+				world.setBlock(x + 1, y, z + 1, BlockLoader.glassDoor, 9, 2);
 				world.setBlock(x, y, z + 1, BlockLoader.glassDoor, 1, 2);
 				world.setBlock(x + 1, y + 1, z + 1, BlockLoader.glassDoor, 13, 2);
 				world.setBlock(x, y + 1, z + 1, BlockLoader.glassDoor, 4, 2);
@@ -66,7 +66,7 @@ public class ItemGlassDoor extends Item {
 					&& this.trySetBlock(world, x - 1, y + 1, z, 6, face, player, stack)
 					&& this.trySetBlock(world, x - 1, y + 1, z + 1, 6, face, player, stack)) {
 				world.setBlock(x - 1, y, z, BlockLoader.glassDoor, 2, 2);
-				world.setBlock(x - 1, y, z + 1, BlockLoader.glassDoor, 9, 2);
+				world.setBlock(x - 1, y, z + 1, BlockLoader.glassDoor, 10, 2);
 				world.setBlock(x - 1, y + 1, z, BlockLoader.glassDoor, 5, 2);
 				world.setBlock(x - 1, y + 1, z + 1, BlockLoader.glassDoor, 14, 2);
 			} else {
@@ -78,7 +78,7 @@ public class ItemGlassDoor extends Item {
 					&& this.trySetBlock(world, x + 1, y, z, 3, face, player, stack)
 					&& this.trySetBlock(world, x + 1, y + 1, z - 1, 7, face, player, stack)
 					&& this.trySetBlock(world, x + 1, y + 1, z, 3, face, player, stack)) {
-				world.setBlock(x + 1, y, z - 1, BlockLoader.glassDoor, 9, 2);
+				world.setBlock(x + 1, y, z - 1, BlockLoader.glassDoor, 11, 2);
 				world.setBlock(x + 1, y, z, BlockLoader.glassDoor, 3, 2);
 				world.setBlock(x + 1, y + 1, z - 1, BlockLoader.glassDoor, 15, 2);
 				world.setBlock(x + 1, y + 1, z, BlockLoader.glassDoor, 5, 2);

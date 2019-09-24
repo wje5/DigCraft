@@ -186,6 +186,7 @@ item.airConditioner.name=Air Conditioner
 item.cabinetAirConditioner.name=Cabinet Air Conditioner
 item.bathtub.name=Bathtub
 item.glassDoor.name=Glass Door
+item.washBasin.name=Wash Basin
 
 tile.sapphireOre.name=Sapphire Ore
 tile.rubyOre.name=Ruby Ore
@@ -271,6 +272,8 @@ tile.airConditioner.name=Air Conditioner
 tile.cabinetAirConditioner.name=Cabinet Air Conditioner
 tile.bathtub.name=Bathtub
 tile.glassDoor.name=Glass Door
+tile.washBasin.name=Wash Basin
+tile.ark.name=Ark
 
 fluid.meltIron=Melt Iron
 
@@ -296,6 +299,7 @@ container.desk=Desk
 container.ambry=Ambry
 container.gasBurner=Gas Burner
 container.fridge=Fridge
+container.ark.name=Ark
 
 nei.recipe.blackhole.name=Energy Infusion
 nei.recipe.smelter.name=Smelter

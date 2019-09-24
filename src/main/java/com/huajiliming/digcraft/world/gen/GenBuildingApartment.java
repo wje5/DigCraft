@@ -312,8 +312,24 @@ public class GenBuildingApartment extends GenBuilding {
 			gen.setBlock(x + 22, y + 1, z + 6, Blocks.bed, 2);
 			gen.setBlock(x + 23, y + 1, z + 5, Blocks.bed, 10);
 			gen.setBlock(x + 23, y + 1, z + 6, Blocks.bed, 2);
+			for (int i = 5; i <= 14; i++) {
+				gen.setBlock(x + 13, y + 4, z + i, BlockLoader.putty, 0);
+				gen.setBlock(x + 14, y + 4, z + i, BlockLoader.putty, 0);
+			}
 			gen.setBlock(x + 13, y + 1, z + 5, BlockLoader.bathtub, 8);
 			gen.setBlock(x + 14, y + 1, z + 5, BlockLoader.bathtub, 0);
+			gen.setBlock(x + 13, y + 3, z + 8, Blocks.glass_pane, 0);
+			gen.setBlock(x + 14, y + 3, z + 8, Blocks.glass_pane, 0);
+			gen.setBlock(x + 13, y + 1, z + 8, BlockLoader.glassDoor, 1);
+			gen.setBlock(x + 14, y + 1, z + 8, BlockLoader.glassDoor, 9);
+			gen.setBlock(x + 13, y + 2, z + 8, BlockLoader.glassDoor, 4);
+			gen.setBlock(x + 14, y + 2, z + 8, BlockLoader.glassDoor, 13);
+			gen.setBlock(x + 13, y + 3, z + 14, BlockLoader.spotLightSmall, 0);
+			gen.setBlock(x + 14, y + 3, z + 14, BlockLoader.spotLightSmall, 0);
+			gen.setBlock(x + 13, y + 2, z + 14, BlockLoader.washBasin, 8);
+			gen.setBlock(x + 14, y + 2, z + 14, BlockLoader.washBasin, 0);
+			gen.setBlock(x + 13, y + 1, z + 14, BlockLoader.ark, 0);
+			gen.setBlock(x + 14, y + 1, z + 14, BlockLoader.ark, 0);
 			return true;
 		}
 

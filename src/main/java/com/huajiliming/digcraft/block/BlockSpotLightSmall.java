@@ -17,7 +17,7 @@ public class BlockSpotLightSmall extends BlockContainer {
 		super(Material.circuits);
 		this.setHardness(1.0F);
 		this.setBlockName("spotLightSmall");
-		this.setBlockTextureName("digcraft:spotLightSmall");
+		this.setBlockTextureName("digcraft:fluorescentLamp");
 	}
 
 	@Override

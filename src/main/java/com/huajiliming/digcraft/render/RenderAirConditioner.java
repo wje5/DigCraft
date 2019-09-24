@@ -19,7 +19,7 @@ public class RenderAirConditioner extends TileEntitySpecialRenderer {
 		GL11.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
 		if (tileentity.getBlockMetadata() < 8) {
 			this.bindTexture(new ResourceLocation("digcraft:textures/models/airConditioner.png"));
-			switch (tileentity.blockMetadata) {
+			switch (tileentity.getBlockMetadata()) {
 			case 0:
 				GL11.glRotatef(180.0F, 0.0F, 1.0F, 0.0F);
 				break;

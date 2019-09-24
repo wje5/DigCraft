@@ -8,7 +8,9 @@ import com.huajiliming.digcraft.tileentity.TileEntityBathtub;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -20,7 +22,108 @@ public class BlockBathtub extends BlockContainer {
 		super(Material.clay);
 		this.setHardness(1.0F);
 		this.setBlockName("bathtub");
-		this.setBlockTextureName("digcraft:bathtub");
+		this.setBlockTextureName("digcraft:toilet");
+	}
+
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int face, float posX,
+			float posY, float posZ) {
+		ItemStack stack = player.getHeldItem();
+		int meta = world.getBlockMetadata(x, y, z);
+		if (stack != null) {
+			if (stack.getItem() == Items.water_bucket) {
+				if (meta < 4) {
+					player.inventory.mainInventory[player.inventory.currentItem] = new ItemStack(Items.bucket);
+					world.setBlockMetadataWithNotify(x, y, z, meta + 4, 2);
+					switch (meta) {
+					case 0:
+						world.setBlockMetadataWithNotify(x - 1, y, z, meta + 12, 2);
+						break;
+					case 1:
+						world.setBlockMetadataWithNotify(x + 1, y, z, meta + 12, 2);
+						break;
+					case 2:
+						world.setBlockMetadataWithNotify(x, y, z + 1, meta + 12, 2);
+						break;
+					case 3:
+						world.setBlockMetadataWithNotify(x, y, z - 1, meta + 12, 2);
+						break;
+					}
+					return true;
+				} else if (meta >= 8 && meta < 12) {
+					player.inventory.mainInventory[player.inventory.currentItem] = new ItemStack(Items.bucket);
+					world.setBlockMetadataWithNotify(x, y, z, meta + 4, 2);
+					switch (meta) {
+					case 0:
+						world.setBlockMetadataWithNotify(x + 1, y, z, meta - 4, 2);
+						break;
+					case 1:
+						world.setBlockMetadataWithNotify(x - 1, y, z, meta - 4, 2);
+						break;
+					case 2:
+						world.setBlockMetadataWithNotify(x, y, z - 1, meta - 4, 2);
+						break;
+					case 3:
+						world.setBlockMetadataWithNotify(x, y, z + 1, meta - 4, 2);
+						break;
+					}
+					return true;
+				}
+			} else if (stack.getItem() == Items.bucket) {
+				if (meta >= 4 && meta < 8) {
+					if (stack.stackSize > 1) {
+						stack.stackSize--;
+					} else {
+						player.inventory.mainInventory[player.inventory.currentItem] = null;
+						if (!player.inventory.addItemStackToInventory(new ItemStack(Items.water_bucket))) {
+							player.dropPlayerItemWithRandomChoice(new ItemStack(Items.water_bucket), false);
+						}
+					}
+					world.setBlockMetadataWithNotify(x, y, z, meta - 4, 2);
+					switch (meta) {
+					case 0:
+						world.setBlockMetadataWithNotify(x - 1, y, z, meta + 4, 2);
+						break;
+					case 1:
+						world.setBlockMetadataWithNotify(x + 1, y, z, meta + 4, 2);
+						break;
+					case 2:
+						world.setBlockMetadataWithNotify(x, y, z + 1, meta + 4, 2);
+						break;
+					case 3:
+						world.setBlockMetadataWithNotify(x, y, z - 1, meta + 4, 2);
+						break;
+					}
+					return true;
+				} else if (meta >= 12) {
+					if (stack.stackSize > 1) {
+						stack.stackSize--;
+					} else {
+						player.inventory.mainInventory[player.inventory.currentItem] = null;
+						if (!player.inventory.addItemStackToInventory(new ItemStack(Items.water_bucket))) {
+							player.dropPlayerItemWithRandomChoice(new ItemStack(Items.water_bucket), false);
+						}
+					}
+					world.setBlockMetadataWithNotify(x, y, z, meta - 4, 2);
+					switch (meta) {
+					case 0:
+						world.setBlockMetadataWithNotify(x + 1, y, z, meta + 4, 2);
+						break;
+					case 1:
+						world.setBlockMetadataWithNotify(x - 1, y, z, meta + 4, 2);
+						break;
+					case 2:
+						world.setBlockMetadataWithNotify(x, y, z - 1, meta + 4, 2);
+						break;
+					case 3:
+						world.setBlockMetadataWithNotify(x, y, z + 1, meta + 4, 2);
+						break;
+					}
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
 	@Override
