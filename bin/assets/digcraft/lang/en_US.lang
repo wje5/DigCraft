@@ -268,6 +268,7 @@ tile.toilet.name=Toilet
 tile.ambry.name=Ambry
 tile.gasBurner.name=Gas Burner
 tile.fridge.name=Fridge
+tile.spotLightSmall.name=Spot Light
 tile.airConditioner.name=Air Conditioner
 tile.cabinetAirConditioner.name=Cabinet Air Conditioner
 tile.bathtub.name=Bathtub
@@ -290,6 +291,8 @@ chat.digcraft.debugger.noOre=Not found nearby.
 chat.playerJoinWorld=Welcome to join our Mod develop group:QQ
 chat.thermometer=Temperature:%1$s
 chat.metadata=MetaData:%1$s
+chat.microPhone.on=Micro Phone:On
+chat.microPhone.off=Micro Phone:Off
 
 container.smelter=Smelter
 container.burningBox=Burning Box

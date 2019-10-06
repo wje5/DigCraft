@@ -18,7 +18,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.3.5"
+version = "1.4.2"
 group= "com.pinball3d.digcraft" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "digcraft"
 

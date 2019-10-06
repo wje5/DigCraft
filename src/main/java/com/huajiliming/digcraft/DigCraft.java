@@ -14,7 +14,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 public class DigCraft {
 	public static final String MODID = "digcraft";
 	public static final String NAME = "Dig Craft";
-	public static final String VERSION = "1.3.5";
+	public static final String VERSION = "1.4.2";
 
 	@Instance("digcraft")
 	public static DigCraft instance;
@@ -37,9 +37,3 @@ public class DigCraft {
 		proxy.postInit(event);
 	}
 }
-
-/*
- * Location: /Volumes/NO
- * NAME/digcraft-pretest4-deobf.jar!/com/huajiliming/digcraft/DigCraft.class
- * Java compiler version: 6 (50.0) JD-Core Version: 0.7.1
- */

@@ -268,6 +268,7 @@ tile.toilet.name=马桶
 tile.ambry.name=橱柜
 tile.gasBurner.name=燃气灶
 tile.fridge.name=冰箱
+tile.spotLightSmall.name=射灯
 tile.airConditioner.name=空调
 tile.cabinetAirConditioner.name=柜式空调
 tile.bathtub.name=浴缸
@@ -290,6 +291,8 @@ chat.digcraft.debugger.noOre=没有找到矿石
 chat.playerJoinWorld=欢迎加入我们的 Mod 开发群:QQ
 chat.thermometer=温度:%1$s
 chat.metadata=MetaData:%1$s
+chat.microPhone.on=麦克风:开启
+chat.microPhone.on=麦克风:关闭
 
 container.smelter=精炼台
 container.burningBox=燃烧室

@@ -1,5 +1,6 @@
 package com.huajiliming.digcraft.proxy;
 
+import com.huajiliming.digcraft.RecordHelper;
 import com.huajiliming.digcraft.key.KeyLoader;
 import com.huajiliming.digcraft.nei.NEIIntergration;
 import com.huajiliming.digcraft.render.RenderLoader;
@@ -23,6 +24,7 @@ public class ClientProxy extends CommonProxy {
 		if (Loader.isModLoaded("NotEnoughItems")) {
 			new NEIIntergration();
 		}
+		RecordHelper.init();
 	}
 
 	@Override

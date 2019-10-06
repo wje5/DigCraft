@@ -126,5 +126,6 @@ public class RenderLoader {
 				new StandardBlockRenderer(new ModelArk(), "ark", true));
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockLoader.ark),
 				new StandardBlockItemRenderer(new ModelArk(), "ark"));
+		MinecraftForgeClient.registerItemRenderer(ItemLoader.microPhone, new RenderItemMicroPhone());
 	}
 }

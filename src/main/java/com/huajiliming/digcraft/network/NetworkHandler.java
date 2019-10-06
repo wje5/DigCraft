@@ -12,5 +12,9 @@ public class NetworkHandler {
 		instance.registerMessage(MessageKeyboardInput.PocketHandler.class, MessageKeyboardInput.class, nextId++,
 				Side.SERVER);
 		instance.registerMessage(MessageBookPage.PocketHandler.class, MessageBookPage.class, nextId++, Side.SERVER);
+		instance.registerMessage(MessageSoundDataToServer.PocketHandler.class, MessageSoundDataToServer.class, nextId++,
+				Side.SERVER);
+		instance.registerMessage(MessageSoundDataToClient.PocketHandler.class, MessageSoundDataToClient.class, nextId++,
+				Side.CLIENT);
 	}
 }
