@@ -33,6 +33,7 @@ public class TileEntityLoader {
 		this.registerTileEntity(TileEntityGlassDoor.class, "GlassDoor");
 		this.registerTileEntity(TileEntityWashBasin.class, "WashBasin");
 		this.registerTileEntity(TileEntityArk.class, "Ark");
+		this.registerTileEntity(TileEntitySpeaker.class, "Speaker");
 	}
 
 	public void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id) {

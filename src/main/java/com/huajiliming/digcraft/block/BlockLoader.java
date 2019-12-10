@@ -104,6 +104,7 @@ public class BlockLoader {
 	public static Block glassDoor = new BlockGlassDoor();
 	public static Block washBasin = new BlockWashBasin();
 	public static Block ark = new BlockArk();
+	public static Block speaker = new BlockSpeaker();
 
 	public BlockLoader(FMLPreInitializationEvent event) {
 		register(sapphireOre);
@@ -198,6 +199,7 @@ public class BlockLoader {
 		register(glassDoor);
 		register(washBasin);
 		register(ark);
+		register(speaker);
 	}
 
 	private static void register(Block block) {

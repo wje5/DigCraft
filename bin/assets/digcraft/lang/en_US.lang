@@ -187,6 +187,7 @@ item.cabinetAirConditioner.name=Cabinet Air Conditioner
 item.bathtub.name=Bathtub
 item.glassDoor.name=Glass Door
 item.washBasin.name=Wash Basin
+item.microPhone.name=Micro Phone
 
 tile.sapphireOre.name=Sapphire Ore
 tile.rubyOre.name=Ruby Ore

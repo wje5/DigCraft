@@ -59,10 +59,8 @@ public class MessageSoundDataToClient implements IMessage {
 			if (helper == null) {
 				helper = SoundHandler.instance.startLine(message.lineId);
 			}
-			;
 			helper.setVol((float) (0.01F
 					* (100.0D - Minecraft.getMinecraft().thePlayer.getDistance(message.x, message.y, message.z))));
-//					0.0D, 4.0D, 0.0D))));
 			for (byte data : message.data) {
 				try {
 					helper.queue.put(data);

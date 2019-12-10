@@ -70,11 +70,11 @@ public class ContainerSmelter extends Container {
 		});
 		for (int i = 0; i < 3; ++i) {
 			for (int j = 0; j < 9; ++j) {
-				this.addSlotToContainer(new Slot(player.inventory, j + i * 9 + 9, 8 + j * 18, 103 + i * 18 + i));
+				this.addSlotToContainer(new Slot(player.inventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
 			}
 		}
 		for (int i = 0; i < 9; ++i) {
-			this.addSlotToContainer(new Slot(player.inventory, i, 8 + i * 18, 161 + i));
+			this.addSlotToContainer(new Slot(player.inventory, i, 8 + i * 18, 142));
 		}
 		this.tileEntity = tileEntity;
 	}

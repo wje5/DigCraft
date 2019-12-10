@@ -35,7 +35,6 @@ public class RenderItemMicroPhone implements IItemRenderer {
 			GL11.glTranslatef(0.5F, 0.5F, 0.5F);
 		}
 		GL11.glTranslatef(0.0F, -0.75F, 0.0F);
-//		GL11.glRotatef(180.0F, 1.0F, 0.0F, 0.0F);
 		GL11.glScalef(0.8F, 0.8F, 0.8F);
 		Minecraft.getMinecraft().renderEngine.bindTexture(this.texture);
 		this.model.renderAll();

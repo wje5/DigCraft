@@ -10,11 +10,11 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = "digcraft", name = "Dig Craft", version = "@version@", acceptedMinecraftVersions = "1.7.10", dependencies = "after:NotEnoughItems")
+@Mod(modid = "digcraft", name = "Dig Craft", version = "@version@", acceptedMinecraftVersions = "1.7.10", dependencies = "after:NotEnoughItems;required-after:maplelib")
 public class DigCraft {
 	public static final String MODID = "digcraft";
 	public static final String NAME = "Dig Craft";
-	public static final String VERSION = "1.4.2";
+	public static final String VERSION = "1.4.3";
 
 	@Instance("digcraft")
 	public static DigCraft instance;

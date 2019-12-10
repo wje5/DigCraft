@@ -187,6 +187,7 @@ item.cabinetAirConditioner.name=柜式空调
 item.bathtub.name=浴缸
 item.glassDoor.name=玻璃门
 item.washBasin.name=洗手台
+item.microPhone.name=麦克风
 
 tile.sapphireOre.name=蓝宝石矿石
 tile.rubyOre.name=红宝石矿石
@@ -275,6 +276,7 @@ tile.bathtub.name=浴缸
 tile.glassDoor.name=玻璃门
 tile.washBasin.name=洗手台
 tile.ark.name=台柜
+tile.speaker.name=音响
 
 fluid.meltIron=熔融铁
 

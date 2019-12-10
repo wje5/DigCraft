@@ -16,16 +16,10 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.InputEvent.KeyInputEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemSmeltedEvent;
-import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.event.ClickEvent;
 import net.minecraft.item.Item;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntityDamageSource;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -97,17 +91,6 @@ public class EventLoader {
 					- (1.0F - event.entityLiving.getTotalArmorValue() * 0.04F) * event.ammount;
 			event.entityLiving.setHealth(event.entityLiving.getHealth() - extraDamage);
 		}
-	}
-
-	@SubscribeEvent
-	public void onPlayerLoggin(PlayerLoggedInEvent event) {
-		IChatComponent msg = new ChatComponentTranslation("chat.playerJoinWorld", new Object[0]);
-		ChatStyle style = new ChatStyle().setBold(Boolean.valueOf(true)).setUnderlined(Boolean.valueOf(true))
-				.setColor(EnumChatFormatting.BLUE)
-				.setChatClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://jq.qq.com/?_wv=1027&k=5Ssxfbn"));
-
-		msg.appendSibling(new ChatComponentTranslation("529418824", new Object[0]).setChatStyle(style));
-		event.player.addChatComponentMessage(msg);
 	}
 
 	@SubscribeEvent

@@ -39,6 +39,7 @@ import com.huajiliming.digcraft.tileentity.TileEntityLittleSofa;
 import com.huajiliming.digcraft.tileentity.TileEntityLongSofa;
 import com.huajiliming.digcraft.tileentity.TileEntityLongTable;
 import com.huajiliming.digcraft.tileentity.TileEntityShoeArc;
+import com.huajiliming.digcraft.tileentity.TileEntitySpeaker;
 import com.huajiliming.digcraft.tileentity.TileEntitySpotLightSmall;
 import com.huajiliming.digcraft.tileentity.TileEntityTV;
 import com.huajiliming.digcraft.tileentity.TileEntityToilet;
@@ -127,5 +128,6 @@ public class RenderLoader {
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockLoader.ark),
 				new StandardBlockItemRenderer(new ModelArk(), "ark"));
 		MinecraftForgeClient.registerItemRenderer(ItemLoader.microPhone, new RenderItemMicroPhone());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySpeaker.class, new RenderSpeaker());
 	}
 }

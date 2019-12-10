@@ -1,5 +1,6 @@
 package com.huajiliming.digcraft.item;
 
+import com.huajiliming.digcraft.block.BlockLoader;
 import com.huajiliming.digcraft.creativetab.CreativeTabsLoader;
 
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,6 +16,25 @@ public class ItemMicroPhone extends Item {
 		this.setTextureName("digcraft:microPhone");
 		this.setMaxStackSize(1);
 		this.setCreativeTab(CreativeTabsLoader.tabDigcraft);
+	}
+
+	@Override
+	public boolean onItemUse(ItemStack stack, EntityPlayer player, World world, int x, int y, int z, int face,
+			float xPos, float yPos, float zPos) {
+		NBTTagCompound tag = stack.getTagCompound();
+		if (tag == null) {
+			tag = new NBTTagCompound();
+		}
+		if (world.getBlock(x, y, z) == BlockLoader.speaker) {
+			tag.setInteger("bindX", x);
+			tag.setInteger("bindY", y);
+			tag.setInteger("bindZ", z);
+			tag.setBoolean("isBinded", true);
+			stack.setTagCompound(tag);
+			return true;
+		}
+		stack.setTagCompound(tag);
+		return false;
 	}
 
 	@Override

@@ -1,16 +1,11 @@
 package com.huajiliming.digcraft.network;
 
 import com.huajiliming.digcraft.config.ConfigLoader;
-import com.huajiliming.digcraft.item.ItemLoader;
-import com.huajiliming.digcraft.item.ItemMicroPhone;
 
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
 import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import io.netty.buffer.ByteBuf;
-import net.minecraft.client.Minecraft;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 public class MessageSoundDataToServer implements IMessage {
 	private int lineId;
@@ -57,14 +52,8 @@ public class MessageSoundDataToServer implements IMessage {
 	public static class PocketHandler implements IMessageHandler<MessageSoundDataToServer, IMessage> {
 		@Override
 		public IMessage onMessage(MessageSoundDataToServer message, MessageContext ctx) {
-			ItemStack stack = Minecraft.getMinecraft().thePlayer.getHeldItem();
-			if (stack != null) {
-				Item item = stack.getItem();
-				if (item == ItemLoader.microPhone && ((ItemMicroPhone) item).isOn(stack)) {
-					NetworkHandler.instance.sendToAll(new MessageSoundDataToClient(message.lineId, message.dim,
-							message.x, message.y, message.z, message.data));
-				}
-			}
+			NetworkHandler.instance.sendToAll(new MessageSoundDataToClient(message.lineId, message.dim, message.x,
+					message.y, message.z, message.data));
 			return null;
 		}
 	}

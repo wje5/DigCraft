@@ -1,194 +1,33 @@
-[16:04:21] [main/INFO]: Extra: []
-[16:04:21] [main/INFO]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
-[16:04:21] [main/INFO]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
-[16:04:21] [main/INFO]: Running with arguments: [--userProperties, {}, --assetsDir, /Users/eye/.gradle/caches/minecraft/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
-[16:04:21] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
-[16:04:21] [main/INFO]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
-[16:04:21] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
-[16:04:21] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
-[16:04:21] [main/INFO]: Forge Mod Loader version 7.99.16.1448 for Minecraft 1.7.10 loading
-[16:04:21] [main/INFO]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_211, running on Mac OS X:x86_64:10.14.6, installed at /Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home/jre
-[16:04:21] [main/INFO]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[16:04:21] [main/INFO]: Found a command line coremod : codechicken.nei.asm.NEICorePlugin
-[16:04:21] [main/WARN]: The coremod codechicken.nei.asm.NEICorePlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[16:04:21] [main/INFO]: Found a command line coremod : codechicken.core.launch.CodeChickenCorePlugin
-[16:04:27] [main/WARN]: The coremod codechicken.core.launch.CodeChickenCorePlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[16:04:27] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
-[16:04:27] [main/INFO]: Injecting location in coremod cpw.mods.fml.relauncher.FMLCorePlugin
-[16:04:27] [main/INFO]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
-[16:04:27] [main/INFO]: Injecting location in coremod codechicken.core.asm.MCPDeobfuscationTransformer.LoadPlugin
-[16:04:27] [main/INFO]: Injecting location in coremod codechicken.nei.asm.NEICorePlugin
-[16:04:27] [main/INFO]: Injecting location in coremod codechicken.core.launch.CodeChickenCorePlugin
-[16:04:27] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[16:04:27] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.FMLDeobfTweaker
-[16:04:27] [main/INFO]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
-[16:04:27] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[16:04:27] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLInjectionAndSortingTweaker
-[16:04:27] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:04:27] [main/ERROR]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
-[16:04:27] [main/ERROR]: FML appears to be missing any signature data. This is not a good thing
-[16:04:27] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:04:27] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:04:28] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:04:28] [main/INFO]: Calling tweak class cpw.mods.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:04:28] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.FMLDeobfTweaker
-[16:04:29] [main/INFO]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
-[16:04:29] [main/INFO]: Remapping AccessTransformer rules...
-[16:04:29] [main/INFO]: Loading tweak class name cpw.mods.fml.common.launcher.TerminalTweaker
-[16:04:29] [main/INFO]: Calling tweak class cpw.mods.fml.common.launcher.TerminalTweaker
-[16:04:29] [main/INFO]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[16:04:31] [main/INFO]: Setting user: Player703
-[16:04:34] [Client thread/INFO]: LWJGL Version: 2.9.1
-[16:04:36] [Client thread/INFO]: [cpw.mods.fml.client.SplashProgress:start:188]: ---- Minecraft Crash Report ----
-// Surprise! Haha. Well, this is awkward.
-
-Time: 19-10-5 下午4:04
-Description: Loading screen debug info
-
-This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
-
-
-A detailed walkthrough of the error, its code path and all known details is as follows:
----------------------------------------------------------------------------------------
-
--- System Details --
-Details:
-	Minecraft Version: 1.7.10
-	Operating System: Mac OS X (x86_64) version 10.14.6
-	Java Version: 1.8.0_211, Oracle Corporation
-	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 4767670680 bytes (4546 MB) / 6174015488 bytes (5888 MB) up to 6174015488 bytes (5888 MB)
-	JVM Flags: 2 total; -Xmx6144M -Xms6144M
-	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
-	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
-	FML: 
-	GL info: ' Vendor: 'Intel Inc.' Version: '2.1 INTEL-12.10.12' Renderer: 'Intel Iris OpenGL Engine'
-[16:04:36] [Client thread/INFO]: Attempting early MinecraftForge initialization
-[16:04:36] [Client thread/INFO]: MinecraftForge v10.13.4.1448 Initialized
-[16:04:36] [Client thread/INFO]: Replaced 183 ore recipies
-[16:04:36] [Client thread/INFO]: Completed early MinecraftForge initialization
-[16:04:36] [Client thread/INFO]: Found 0 mods from the command line. Injecting into mod discoverer
-[16:04:36] [Client thread/INFO]: Searching /Volumes/NO NAME/workspace/DigCraft/mods for mods
-[16:04:36] [Client thread/INFO]: Also searching /Volumes/NO NAME/workspace/DigCraft/mods/1.7.10 for mods
-[16:04:41] [Client thread/INFO]: Forge Mod Loader has identified 6 mods to load
-[16:04:41] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, NotEnoughItems, CodeChickenCore, digcraft] at CLIENT
-[16:04:41] [Client thread/INFO]: Attempting connection with missing mods [mcp, FML, Forge, NotEnoughItems, CodeChickenCore, digcraft] at SERVER
-[16:04:42] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Dig Craft
-[16:04:42] [Client thread/INFO]: Processing ObjectHolder annotations
-[16:04:42] [Client thread/INFO]: Found 341 ObjectHolder annotations
-[16:04:42] [Client thread/INFO]: Identifying ItemStackHolder annotations
-[16:04:42] [Client thread/INFO]: Found 0 ItemStackHolder annotations
-[16:04:42] [Client thread/INFO]: Configured a dormant chunk cache size of 0
-[16:04:42] [Client thread/INFO]: Started loading config. 
-[16:04:42] [Client thread/INFO]: Finished loading config. 
-[16:04:43] [Client thread/INFO]: Applying holder lookups
-[16:04:43] [Client thread/INFO]: Holder lookups applied
-[16:04:43] [Client thread/INFO]: Injecting itemstacks
-[16:04:43] [Client thread/INFO]: Itemstack injection complete
-[16:04:43] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[16:04:43] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
-[16:04:44] [Thread-7/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
-[16:04:44] [Thread-7/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[16:04:44] [Thread-7/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
-[16:04:44] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[16:04:44] [Sound Library Loader/INFO]: Sound engine started
-[16:04:46] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[16:04:46] [Client thread/INFO]: Created: 512x512 textures/items-atlas
-[16:04:46] [Client thread/ERROR]: Unable to do mod description scrolling due to lack of stencil buffer
-[16:04:46] [Client thread/ERROR]: Unable to do mod description scrolling due to lack of stencil buffer
-[16:04:47] [Client thread/INFO]: Injecting itemstacks
-[16:04:47] [Client thread/INFO]: Itemstack injection complete
-[16:04:47] [Client thread/INFO]: Forge Mod Loader has successfully loaded 6 mods
-[16:04:47] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Dig Craft
-[16:04:47] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[16:04:48] [Client thread/INFO]: Created: 512x512 textures/items-atlas
-[16:04:48] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[16:04:48] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
-[16:04:48] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
-[16:04:48] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[16:04:48] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[16:04:48] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Starting up SoundSystem...
-[16:04:48] [Thread-12/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: Initializing LWJGL OpenAL
-[16:04:48] [Thread-12/INFO]: [paulscode.sound.SoundSystemLogger:message:69]:     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[16:04:48] [Thread-12/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: OpenAL initialized.
-[16:04:49] [Sound Library Loader/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[16:04:49] [Sound Library Loader/INFO]: Sound engine started
-[16:04:49] [Client thread/ERROR]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-[16:04:49] [Client thread/ERROR]: The following texture errors were found.
-[16:04:49] [Client thread/ERROR]: ==================================================
-[16:04:49] [Client thread/ERROR]:   DOMAIN digcraft
-[16:04:49] [Client thread/ERROR]: --------------------------------------------------
-[16:04:49] [Client thread/ERROR]:   domain digcraft is missing 17 textures
-[16:04:49] [Client thread/ERROR]:     domain digcraft has 1 location:
-[16:04:49] [Client thread/ERROR]:       mod digcraft resources at /Volumes/NO NAME/workspace/DigCraft/bin
-[16:04:49] [Client thread/ERROR]: -------------------------
-[16:04:49] [Client thread/ERROR]:     The missing resources for domain digcraft are:
-[16:04:49] [Client thread/ERROR]:       textures/items/washBasin.png
-[16:04:49] [Client thread/ERROR]:       textures/items/longTable.png
-[16:04:49] [Client thread/ERROR]:       textures/items/longSofa.png
-[16:04:49] [Client thread/ERROR]:       textures/blocks/cabinetAirConditioner.png
-[16:04:49] [Client thread/ERROR]:       textures/items/tv.png
-[16:04:49] [Client thread/ERROR]:       textures/items/glassDoor.png
-[16:04:49] [Client thread/ERROR]:       textures/items/airConditioner.png
-[16:04:49] [Client thread/ERROR]:       textures/items/fridge.png
-[16:04:49] [Client thread/ERROR]:       textures/items/microPhone.png
-[16:04:49] [Client thread/ERROR]:       textures/items/diningChair.png
-[16:04:49] [Client thread/ERROR]:       textures/blocks/airConditioner.png
-[16:04:49] [Client thread/ERROR]:       textures/items/pan.png
-[16:04:49] [Client thread/ERROR]:       textures/items/cabinetAirConditioner.png
-[16:04:49] [Client thread/ERROR]:       textures/items/diningTable.png
-[16:04:49] [Client thread/ERROR]:       textures/blocks/ark.png
-[16:04:49] [Client thread/ERROR]:       textures/items/bathtub.png
-[16:04:49] [Client thread/ERROR]:       textures/items/desk.png
-[16:04:49] [Client thread/ERROR]: -------------------------
-[16:04:49] [Client thread/ERROR]:     No other errors exist for domain digcraft
-[16:04:49] [Client thread/ERROR]: ==================================================
-[16:04:49] [Client thread/ERROR]: +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
-[16:04:53] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[16:04:53] [Server thread/INFO]: Generating keypair
-[16:04:53] [Server thread/INFO]: Injecting existing block and item data into this server instance
-[16:04:53] [Server thread/INFO]: Applying holder lookups
-[16:04:53] [Server thread/INFO]: Holder lookups applied
-[16:04:53] [Server thread/INFO]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@4631e66a)
-[16:04:53] [Server thread/INFO]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@4631e66a)
-[16:04:54] [Server thread/INFO]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@4631e66a)
-[16:04:54] [Server thread/INFO]: Preparing start region for level 0
-[16:04:55] [Server thread/INFO]: Preparing spawn area: 8%
-[16:04:56] [Server thread/INFO]: Changing view distance to 12, from 10
-[16:04:56] [Netty Client IO #0/INFO]: Server protocol version 2
-[16:04:56] [Netty IO #1/INFO]: Client protocol version 2
-[16:04:56] [Netty IO #1/INFO]: Client attempting to join with 6 mods : digcraft@@version@,NotEnoughItems@1.0.5.120,CodeChickenCore@1.0.7.47,FML@7.10.99.99,Forge@10.13.4.1448,mcp@9.05
-[16:04:56] [Netty IO #1/INFO]: Attempting connection with missing mods [] at CLIENT
-[16:04:56] [Netty Client IO #0/INFO]: Attempting connection with missing mods [] at SERVER
-[16:04:56] [Client thread/INFO]: [Client thread] Client side modded connection established
-[16:04:56] [Server thread/INFO]: [Server thread] Server side modded connection established
-[16:04:56] [Server thread/INFO]: Player703[local:E:803e664b] logged in with entity id 200 at (29.86133606632741, 66.0, 11.764558982336473)
-[16:04:56] [Server thread/INFO]: Player703 joined the game
-[16:05:00] [Client thread/INFO]: [CHAT] Welcome to join our Mod develop group:QQ529418824
-[16:05:03] [Client thread/INFO]: [CHAT] Micro Phone:On
-[16:05:04] [Client thread/INFO]: [CHAT] Micro Phone:Off
-[16:05:04] [Client thread/INFO]: [CHAT] Micro Phone:On
-[16:05:04] [Client thread/INFO]: [CHAT] Micro Phone:Off
-[16:05:04] [Client thread/INFO]: [CHAT] Micro Phone:On
-[16:05:08] [Client thread/INFO]: [CHAT] Micro Phone:Off
-[16:05:09] [Client thread/INFO]: [CHAT] Micro Phone:On
-[16:05:11] [Client thread/INFO]: [CHAT] Micro Phone:Off
-[16:05:13] [Client thread/INFO]: [CHAT] Micro Phone:On
-[16:05:14] [Client thread/INFO]: [CHAT] Micro Phone:Off
-[16:05:15] [Client thread/INFO]: [CHAT] Micro Phone:On
-[16:05:18] [Client thread/INFO]: [CHAT] Micro Phone:Off
-[16:05:28] [Server thread/INFO]: Player703 has just earned the achievement [Taking Inventory]
-[16:05:28] [Client thread/INFO]: [CHAT] Player703 has just earned the achievement [Taking Inventory]
-[16:05:29] [Client thread/INFO]: Stopping!
-[16:05:29] [Server thread/INFO]: Stopping server
-[16:05:29] [Server thread/INFO]: Saving players
-[16:05:29] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[16:05:29] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: SoundSystem shutting down...
-[16:05:29] [Server thread/INFO]: Saving worlds
-[16:05:29] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[16:05:29] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[16:05:29] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[16:05:29] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:importantMessage:90]:     Author: Paul Lamb, www.paulscode.com
-[16:05:29] [Client thread/INFO]: [paulscode.sound.SoundSystemLogger:message:69]: 
-[16:05:29] [Client Shutdown Thread/INFO]: Stopping server
-[16:05:29] [Client Shutdown Thread/INFO]: Saving players
+[13:29:02] [main/INFO]: Setting user: Player846
+[13:29:10] [Client thread/INFO]: LWJGL Version: 2.9.1
+[13:29:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Dig Craft, FMLFileResourcePack:Maple Lib
+[13:29:21] [Sound Library Loader/INFO]: Sound engine started
+[13:29:23] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[13:29:24] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[13:29:24] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Not Enough Items, FMLFileResourcePack:Dig Craft, FMLFileResourcePack:Maple Lib
+[13:29:25] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[13:29:25] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[13:29:26] [Sound Library Loader/INFO]: Sound engine started
+[13:30:21] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[13:30:21] [Server thread/INFO]: Generating keypair
+[13:30:22] [Server thread/INFO]: Preparing start region for level 0
+[13:30:23] [Server thread/INFO]: Preparing spawn area: 47%
+[13:30:24] [Server thread/INFO]: Changing view distance to 12, from 10
+[13:30:24] [Server thread/INFO]: Player846[local:E:5e80aef6] logged in with entity id 148 at (-1092.6251845662455, 4.0, 524.0448332023035)
+[13:30:24] [Server thread/INFO]: Player846 joined the game
+[13:30:25] [Client thread/INFO]: [CHAT] Welcome to join our Mod develop group:QQ529418824
+[13:30:32] [Server thread/INFO]: Saving and pausing game...
+[13:30:32] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:30:32] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:30:32] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:30:59] [Server thread/INFO]: Player846 has just earned the achievement [Taking Inventory]
+[13:31:00] [Client thread/INFO]: [CHAT] Player846 has just earned the achievement [Taking Inventory]
+[13:31:48] [Client thread/INFO]: Stopping!
+[13:31:48] [Server thread/INFO]: Stopping server
+[13:31:48] [Server thread/INFO]: Saving players
+[13:31:48] [Server thread/INFO]: Saving worlds
+[13:31:48] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[13:31:48] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[13:31:48] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[13:31:49] [Client Shutdown Thread/INFO]: Stopping server
+[13:31:49] [Client Shutdown Thread/INFO]: Saving players

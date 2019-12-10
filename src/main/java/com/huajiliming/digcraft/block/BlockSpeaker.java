@@ -3,120 +3,66 @@ package com.huajiliming.digcraft.block;
 import java.util.Random;
 
 import com.huajiliming.digcraft.creativetab.CreativeTabsLoader;
-import com.huajiliming.digcraft.tileentity.TileEntityBedsideTable;
+import com.huajiliming.digcraft.item.ItemLoader;
+import com.huajiliming.digcraft.tileentity.TileEntitySpeaker;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.BlockPistonBase;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockSpeaker extends BlockContainer {
 	public BlockSpeaker() {
 		super(Material.circuits);
 		this.setHardness(1.0F);
-		this.setBlockName("bedsideTable");
-		this.setBlockTextureName("digcraft:bedsideTable");
+		this.setBlockName("speaker");
+		this.setBlockTextureName("digcraft:speaker");
 		this.setCreativeTab(CreativeTabsLoader.tabDigcraft);
 	}
 
 	@Override
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int face, float posX,
-			float posY, float posZ) {
+	public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
 		int meta = world.getBlockMetadata(x, y, z);
-		if (meta % 4 == face - 2) {
-			int slot;
-			int slot1on = meta >= 8 ? 1 : 0;
-			int slot2on = meta % 8 >= 4 ? 1 : 0;
-			if (posY >= 0.125 && posY <= 0.5) {
-				slot = 0;
-			} else if (posY >= 0.5625 && posY <= 0.9375) {
-				slot = 1;
-			} else {
-				return false;
-			}
-			if (player.isSneaking()) {
-				if (slot == 0) {
-					slot1on = slot1on == 1 ? 0 : 1;
-					world.setBlockMetadataWithNotify(x, y, z, meta % 4 + slot1on * 8 + slot2on * 4, 2);
-					return true;
-				} else {
-					slot2on = slot2on == 1 ? 0 : 1;
-					world.setBlockMetadataWithNotify(x, y, z, meta % 4 + slot1on * 8 + slot2on * 4, 2);
-					return true;
-				}
-			} else {
-				if ((slot == 0 && slot1on == 1) || (slot == 1 && slot2on == 1)) {
-					ItemStack stack = player.getHeldItem();
-					TileEntityBedsideTable te = (TileEntityBedsideTable) world.getTileEntity(x, y, z);
-					if (stack != null) {
-						if (te.getStackInSlot(slot) == null) {
-							te.setInventorySlotContents(slot, stack);
-							player.inventory.mainInventory[player.inventory.currentItem] = null;
-							return true;
-						}
-					} else if (te.getStackInSlot(slot) != null) {
-						player.inventory.mainInventory[player.inventory.currentItem] = te.getStackInSlot(slot);
-						te.setInventorySlotContents(slot, null);
-						return true;
-					}
-				}
+		if (meta < 8) {
+			if (world.getBlock(x, y + 1, z) != BlockLoader.speaker) {
+				this.dropBlockAsItem(world, x, y, z, new ItemStack(ItemLoader.speaker));
+				world.setBlock(x, y, z, Blocks.air, 0, 2);
+				world.setBlock(x, y + 1, z, Blocks.air, 0, 2);
 			}
 		}
-		return false;
-	}
-
-	@Override
-	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entity, ItemStack itemStack) {
-		int meta = BlockPistonBase.determineOrientation(world, x, y, z, entity);
-		if ((meta == 0) || (meta == 1)) {
-			meta = 2;
-		}
-		meta -= 2;
-		world.setBlockMetadataWithNotify(x, y, z, meta, 2);
 	}
 
 	@Override
 	public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
-		TileEntityBedsideTable tileentity = (TileEntityBedsideTable) world.getTileEntity(x, y, z);
-		if (tileentity != null) {
-			for (int i1 = 0; i1 < tileentity.getSizeInventory(); i1++) {
-				ItemStack itemstack = tileentity.getStackInSlot(i1);
-				if (itemstack != null) {
-					Random rand = new Random();
-					float f = rand.nextFloat() * 0.8F + 0.1F;
-					float f1 = rand.nextFloat() * 0.8F + 0.1F;
-					float f2 = rand.nextFloat() * 0.8F + 0.1F;
-					while (itemstack.stackSize > 0) {
-						int j1 = rand.nextInt(21) + 10;
-						if (j1 > itemstack.stackSize) {
-							j1 = itemstack.stackSize;
-						}
-						itemstack.stackSize -= j1;
-
-						EntityItem entityitem = new EntityItem(world, x + f, y + f1, z + f2,
-								new ItemStack(itemstack.getItem(), j1, itemstack.getItemDamage()));
-						if (itemstack.hasTagCompound()) {
-							entityitem.getEntityItem()
-									.setTagCompound((NBTTagCompound) itemstack.getTagCompound().copy());
-						}
-						float f3 = 0.05F;
-						entityitem.motionX = ((float) rand.nextGaussian() * f3);
-						entityitem.motionY = ((float) rand.nextGaussian() * f3 + 0.2F);
-						entityitem.motionZ = ((float) rand.nextGaussian() * f3);
-						world.spawnEntityInWorld(entityitem);
-					}
-				}
-			}
-			world.func_147453_f(x, y, z, block);
+		if (meta < 8) {
+			world.setBlock(x, y + 1, z, Blocks.air, 0, 2);
 		}
 		super.breakBlock(world, x, y, z, block, meta);
+	}
+
+	@Override
+	public void setBlockBoundsBasedOnState(IBlockAccess world, int x, int y, int z) {
+		int meta = world.getBlockMetadata(x, y, z);
+		if (meta < 8) {
+			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
+		} else {
+			this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.6F, 1.0F);
+		}
+	}
+
+	@Override
+	public Item getItemDropped(int meta, Random rand, int fortune) {
+		return meta < 8 ? ItemLoader.speaker : null;
+	}
+
+	@Override
+	public Item getItem(World world, int x, int y, int z) {
+		return ItemLoader.speaker;
 	}
 
 	@Override
@@ -136,6 +82,6 @@ public class BlockSpeaker extends BlockContainer {
 
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
-		return new TileEntityBedsideTable();
+		return new TileEntitySpeaker();
 	}
 }

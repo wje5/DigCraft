@@ -202,6 +202,7 @@ public class ItemLoader {
 	public static Item glassDoor = new ItemGlassDoor();
 	public static Item washBasin = new ItemWashBasin();
 	public static Item microPhone = new ItemMicroPhone();
+	public static Item speaker = new ItemSpeaker();
 
 	public ItemLoader(FMLPreInitializationEvent event) {
 		register(sapphire);
@@ -390,6 +391,7 @@ public class ItemLoader {
 		register(glassDoor);
 		register(washBasin);
 		register(microPhone);
+		register(speaker);
 	}
 
 	private static void register(Item item) {
